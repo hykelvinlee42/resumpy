@@ -1,0 +1,122 @@
+{
+  "heading": {
+    "name": "Ho Yin Kelvin, Lee",
+    "personal_url": "https://hykelvinlee.com/",
+    "github_handle": "hykelvinlee42",
+    "github_url": "https://github.com/hykelvinlee42",
+    "linkedin_handle": "hykelvinlee",
+    "linkedin_url": "https://www.linkedin.com/in/hykelvinlee/",
+    "phone": "(778) 984-9842",
+    "email": "hykelvinlee42@gmail.com"
+  },
+  "overview": [
+    "Computing science graduate with 3+ years industry (software testing & development) and research experience (astrophysics & quantum algorithms)",
+    "A fast learner who is experienced in working in team centric and fast pace environments",
+    "Proficient in OOP languages, C/C++ & Swift, as well data analysis language, Python"
+  ],
+  "work": [
+    {
+      "organization": "Simon Fraser University",
+      "positions": [
+        {
+          "title": "Undergraduate Research Assistant",
+          "duration": "Apr 2021 - Present",
+          "description": [
+            "Supervised by Dr. Joanna Woo to investigate changes in galaxies' densities during galaxy quenching",
+            "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)"
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "Emerge Global Experience",
+      "positions": [
+        {
+          "title": "Lead Software Developer",
+          "duration": "Jan 2021 - Present",
+          "description": [
+            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
+            "Designed overall back-end structure for users data, program info e.g. and API methods with Google Firebase Firestore & Functions",
+            "Planned and oversaw the project in (3+ developers) team to ensure the main launch features (discussion community, customizable portfolio and video-based learning e.g.) are completed in seven months and within required budget"
+          ]
+        }
+      ]
+    },
+    {
+      "organization": "NETGEAR",
+      "positions": [
+        {
+          "title": "Software Developer",
+          "duration": "Sep 2019 - Apr 2020",
+          "description": [
+            "Diagnosed and addressed 100+ reported issues and assisted development teams with triaging customer and field issues",
+            "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective-C occasionally",
+            "Assisted with integrating business analytics tools and user-data protection within different networking protocols (SOAP and REST APIs) in the application"
+          ]
+        },
+        {
+          "title": "Certification Engineer (Co-op)",
+          "duration": "Jan 2019 - Aug 2019",
+          "description": [
+            "Drove configuration management for multiple LTE and 5G mobile hotspot products based on regulatory requirements and built customized package for different carriers",
+            "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace",
+            "Developed and maintained automated software tools and build scripts to improve workflow process, data analysis and project test in LTE Advanced Carrier Aggregation combination using Python, C#, .NET framework, AT commands and Visual Basic"
+          ]
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "TermiWatch",
+      "url": "https://github.com/hykelvinlee42/TermiWatch",
+      "nature": "iOS Application Development",
+      "duration": "Jun 2021 - Sep 2021",
+      "description": [
+        "Contributed in open source project for a CLI style Apple Watch face application",
+        "Studied Apple’s Watch Connectivity protocol and developed an iOS application to communicate with Apple Watch to allow users’ customization, adding/removing components, username/hostname customization",
+        "Utilized Swift EventKit to securely access and retrieve users’ calendar database"
+      ]
+    },
+    {
+      "title": "Stable Matching Quantum Algorithm",
+      "url": "https://github.com/hykelvinlee42/quantum-stable-matching",
+      "nature": "Special Topics in Theoretical Computing Science - Intro to Quantum Computing, SFU",
+      "duration": "May 2021 - Jul 2021",
+      "description": [
+        "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
+        "Researched and designed search blackboxes for all entities in the proof of concept demo",
+        "Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+      ]
+    },
+    {
+      "title": "Variable Star Photometry",
+      "url": "https://github.com/hykelvinlee42/RRLeo-Photometry",
+      "nature": "Introduction to Observational Astrophysics, SFU",
+      "duration": "Jan 2021 - Apr 2021",
+      "description": [
+        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",
+        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)",
+        "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
+      ]
+    },
+    {
+      "title": "Easy Text",
+      "url": "http://www.easy-text.com",
+      "nature": "Python/ReactJS Development",
+      "duration": "Jan 2020 - Sep 2020",
+      "description": [
+        "Created text scraping from web page module and texts summarizing module using Python with integration of Google Cloud Platform Natural Language model",
+        "Deployed the module in a form of RESTful API service on Google Cloud Platform App Engine using Python Flask framework",
+        "Created responsive layout website which takes user input (text or URL) then sends and retrieves requests to the Flask server with ReactJS and Semantic UI React framework"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Simon Fraser University",
+      "degree": "Bachelor of Science, Majoring in Computing Science",
+      "duration": "Sept 2016 - Dec 2021"
+    }
+  ]
+}

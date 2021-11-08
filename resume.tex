@@ -1,0 +1,172 @@
+\documentclass[letterpaper,11pt]{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{fontspec}%
+\usepackage{latexsym}%
+\usepackage[empty]{fullpage}%
+\usepackage{titlesec}%
+\usepackage{color}%
+\usepackage{transparent}%
+\usepackage{enumitem}%
+\usepackage[hidelinks]{hyperref}%
+\usepackage{fancyhdr}%
+\usepackage{tabularx}%
+\usepackage[normalem]{ulem}%
+%
+\definecolor{HeaderBrown}{rgb}{0.35, 0.29, 0.23}%
+\definecolor{SeparatorPink}{rgb}{0.94, 0.41, 0.25}%
+\definecolor{TextBlack}{rgb}{0.0, 0.0, 0.0}%
+\pagestyle{fancy}%
+\fancyhf{}%
+\fancyfoot{}%
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\addtolength{\oddsidemargin}{-0.5in}%
+\addtolength{\evensidemargin}{0in}%
+\addtolength{\textwidth}{1in}%
+\addtolength{\topmargin}{-.5in}%
+\addtolength{\textheight}{1.0in}%
+\urlstyle{same}%
+\raggedbottom%
+\raggedright%
+\setlength{\tabcolsep}{0in}%
+\newfontfamily{\timesnewroman}{TimesNewRoman}[Path = fonts/, Extension = .ttf]%
+\newfontfamily{\avenirnext}{AvenirNext}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=7}]%
+\newfontfamily{\avenirnextmedium}{AvenirNext}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=5}]%
+\newfontfamily{\avenir}{Avenir}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=0}]%
+\newfontfamily{\avenirheavy}{Avenir}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=4}]%
+\titleformat{\section}{
+		\bfseries \vspace{2pt} \centering \large \color{HeaderBrown} \avenirnextmedium \addfontfeatures{LetterSpace=10}
+}{}{0em}{}[\color{SeparatorPink} \transparent{0.5} {\titlerule[0.5pt]} \vspace{-4pt}]%
+\newcommand{\resumeItem}[1]{\item\avenir\small{
+            #1 \vspace{-1pt}
+    }
+    }%
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\small$\bullet$}}$}%
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}%
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}%
+\newcommand{\resumeItemListStart}{\begin{itemize}}%
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}%
+\color{TextBlack}%
+%
+\begin{document}%
+\normalsize%
+\newcommand{\resumeHeading}[8]{
+        \begin{center}
+            \color{SeparatorPink} \transparent{0.5}\rule{0.8\textwidth}{1pt} \\ \vspace{1pt}
+            \color{HeaderBrown}
+            \transparent{1.0}
+            \href{#2}{\timesnewroman \Large \addfontfeatures{LetterSpace=15} \MakeUppercase{#1}} \\ \vspace{5pt}
+            {\avenirnext \small {Github: \href{#4}{\uline{@#3}}} \hspace{2pt} {LinkedIn: \href{#6}{\uline{@#5}}} \hspace{2pt} {#7} \hspace{2pt} {\href{mailto:#8}{\uline{#8}}}}
+            \vspace{0pt} \color{SeparatorPink} \transparent{0.5} \rule{0.8\textwidth}{3pt}
+        \end{center}
+        }%
+\resumeHeading{Ho Yin Kelvin, Lee}{https://hykelvinlee.com/}{hykelvinlee42}{https://github.com/hykelvinlee42}{hykelvinlee}{https://www.linkedin.com/in/hykelvinlee/}{(778) 984-9842}{hykelvinlee42@gmail.com}%
+\newcommand{\resumeOverview}{
+        \item\resumeItemListStart
+        }%
+\section{OVERVIEW}%
+\label{sec:OVERVIEW}%
+\resumeSubHeadingListStart%
+\resumeOverview%
+\resumeItem{Computing science graduate with 3+ years industry (software testing \& development) and research experience (astrophysics \& quantum algorithms)}%
+\resumeItem{A fast learner who is experienced in working in team centric and fast pace environments}%
+\resumeItem{Proficient in OOP languages, C/C++ \& Swift, as well data analysis language, Python}%
+\resumeItemListEnd%
+\resumeSubHeadingListEnd
+
+%
+\newcommand{\resumeWork}[3]{
+        \vspace{-1pt}\item
+        \begin{tabular*}\textwidth[t]{l@{\extracolsep{\fill}}r}
+        \avenirheavy{#1}\vspace{1pt}\\
+        \avenir{#2} & {\color{TextBlack} \avenir \small #3}\\
+        \end{tabular*}\vspace{-4pt}
+        \resumeItemListStart
+        }%
+\newcommand{\resumeWorkNullCompany}[2]{
+        \vspace{-10pt}\item
+        \begin{tabular*}\textwidth[t]{l@{\extracolsep{\fill}}r}\\
+        \avenir{#1} & {\color{TextBlack} \avenir \small #2}\\
+        \end{tabular*}\vspace{-4pt}
+        \resumeItemListStart
+        }%
+\section{WORK EXPERIENCE}%
+\label{sec:WORKEXPERIENCE}%
+\resumeSubHeadingListStart%
+\resumeWork{Simon Fraser University}{Undergraduate Research Assistant}{Apr 2021 - Present}%
+\resumeItem{Supervised by Dr. Joanna Woo to investigate changes in galaxies' densities during galaxy quenching}%
+\resumeItem{Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)}%
+\resumeItemListEnd%
+\resumeWork{Emerge Global Experience}{Lead Software Developer}{Jan 2021 - Present}%
+\resumeItem{Developed the front{-}end and back{-}end for a skills learning platform using ReactJS and NodeJS}%
+\resumeItem{Designed overall back{-}end structure for users data, program info e.g. and API methods with Google Firebase Firestore \& Functions}%
+\resumeItem{Planned and oversaw the project in (3+ developers) team to ensure the main launch features (discussion community, customizable portfolio and video{-}based learning e.g.) are completed in seven months and within required budget}%
+\resumeItemListEnd%
+\resumeWork{NETGEAR}{Software Developer}{Sep 2019 - Apr 2020}%
+\resumeItem{Diagnosed and addressed 100+ reported issues and assisted development teams with triaging customer and field issues}%
+\resumeItem{Assisted with developing and optimizing front{-}end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective{-}C occasionally}%
+\resumeItem{Assisted with integrating business analytics tools and user{-}data protection within different networking protocols (SOAP and REST APIs) in the application}%
+\resumeItemListEnd%
+\resumeWorkNullCompany{Certification Engineer (Co-op)}{Jan 2019 - Aug 2019}%
+\resumeItem{Drove configuration management for multiple LTE and 5G mobile hotspot products based on regulatory requirements and built customized package for different carriers}%
+\resumeItem{Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace}%
+\resumeItem{Developed and maintained automated software tools and build scripts to improve workflow process, data analysis and project test in LTE Advanced Carrier Aggregation combination using Python, C\#, .NET framework, AT commands and Visual Basic}%
+\resumeItemListEnd%
+\resumeSubHeadingListEnd
+
+%
+\newcommand{\resumeProject}[3]{
+        \item
+        \begin{tabular*}\textwidth[t]{l@{\extracolsep{\fill}}r}
+        \avenir \uline{#1} & {\color{TextBlack} \avenir \small #3} \vspace{1pt}\\
+        \avenirheavy{#2} \\
+        \end{tabular*}\vspace{-4pt}
+        \resumeItemListStart
+        }%
+\section{RELATED EXPERIENCE}%
+\label{sec:RELATEDEXPERIENCE}%
+\resumeSubHeadingListStart%
+\resumeProject{\href{https://github.com/hykelvinlee42/TermiWatch}{TermiWatch}}{iOS Application Development}{Jun 2021 - Sep 2021}%
+\resumeItem{Contributed in open source project for a CLI style Apple Watch face application}%
+\resumeItem{Studied Apple’s Watch Connectivity protocol and developed an iOS application to communicate with Apple Watch to allow users’ customization, adding/removing components, username/hostname customization}%
+\resumeItem{Utilized Swift EventKit to securely access and retrieve users’ calendar database}%
+\resumeItemListEnd%
+\resumeProject{\href{https://github.com/hykelvinlee42/quantum{-}stable{-}matching}{Stable Matching Quantum Algorithm}}{Special Topics in Theoretical Computing Science {-} Intro to Quantum Computing, SFU}{May 2021 - Jul 2021}%
+\resumeItem{Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity}%
+\resumeItem{Researched and designed search blackboxes for all entities in the proof of concept demo}%
+\resumeItem{Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\% on Qiskit Aer quantum computing simulator}%
+\resumeItemListEnd%
+\resumeProject{\href{https://github.com/hykelvinlee42/RRLeo{-}Photometry}{Variable Star Photometry}}{Introduction to Observational Astrophysics, SFU}{Jan 2021 - Apr 2021}%
+\resumeItem{Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)}%
+\resumeItem{Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)}%
+\resumeItem{Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results}%
+\resumeItemListEnd%
+\resumeProject{\href{http://www.easy{-}text.com}{Easy Text}}{Python/ReactJS Development}{Jan 2020 - Sep 2020}%
+\resumeItem{Created text scraping from web page module and texts summarizing module using Python with integration of Google Cloud Platform Natural Language model}%
+\resumeItem{Deployed the module in a form of RESTful API service on Google Cloud Platform App Engine using Python Flask framework}%
+\resumeItem{Created responsive layout website which takes user input (text or URL) then sends and retrieves requests to the Flask server with ReactJS and Semantic UI React framework}%
+\resumeItemListEnd%
+\resumeSubHeadingListEnd
+
+%
+\newcommand{\resumeEducation}[2]{
+        \vspace{-1pt}\item
+        \begin{tabular*}\textwidth[t]{l@{\extracolsep{\fill}}r}
+        \avenirheavy{#1} & {\color{TextBlack} \avenir \small #2}\\
+        \end{tabular*}\vspace{-4pt}
+        \resumeItemListStart
+        }%
+\section{EDUCATION}%
+\label{sec:EDUCATION}%
+\resumeSubHeadingListStart%
+\resumeEducation{Simon Fraser University}{Sept 2016 - Dec 2021}%
+\resumeItem{Bachelor of Science, Majoring in Computing Science}%
+\resumeItemListEnd%
+\resumeSubHeadingListEnd
+
+%
+\end{document}
