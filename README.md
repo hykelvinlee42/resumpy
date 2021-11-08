@@ -5,6 +5,7 @@ Automate (my) clean resume generation with Python and LaTex.
 ## Getting Started
 
 ### Prerequisites
+
 ```
 python --version
 >> Python 3.8

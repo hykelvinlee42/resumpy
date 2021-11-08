@@ -16,7 +16,7 @@ def add_experience(doc, resume_data):
             link_and_name = Command("href", arguments=project["url"], extra_arguments=project["title"])
             doc.append(Command("resumeProject", arguments=link_and_name, extra_arguments=[project["nature"], NoEscape(project["duration"])]))
             for description in project["description"]:
-                doc.append(Command("resumeItem", arguments=description))
+                doc.append(Command("resumeItem", arguments=NoEscape(description)))
 
             doc.append(Command("resumeItemListEnd"))
 

@@ -1,6 +1,7 @@
-from pylatex import Document, Command, UnsafeCommand, NoEscape
+from pylatex import Document, Command, NoEscape
 from sections import overview, work, experience, education
 import packages as pkgs
+import docsetup
 import colors
 import json
 import os
@@ -33,24 +34,6 @@ def fill_document(doc):
     education.add_education(doc, resume_data)
 
 
-def setup_document(doc):
-    with open("setup.json", "r") as setup_file:
-        json_data = json.load(setup_file)
-        for line in json_data["setups"]:
-            doc.preamble.append(NoEscape(r"{}".format(line)))
-
-        for newcommand in json_data["newcommands"]:
-            options = None
-            try:
-                options = newcommand["options"]
-            except KeyError:
-                pass
-
-            doc.preamble.append(UnsafeCommand(newcommand["command"], newcommand["arguments"], options=options, extra_arguments=NoEscape(r"{}".format(newcommand["extra_arguments"]))))
-
-    doc.preamble.append(Command("color", arguments="TextBlack"))
-
-
 def build_resume(directory="./generated_resume/", filename="resume"):
     documentclass = Command("documentclass", options=("letterpaper", "11pt"), arguments="article")
     doc = Document(filename, documentclass=documentclass)
@@ -58,7 +41,7 @@ def build_resume(directory="./generated_resume/", filename="resume"):
     pkgs.add_packages(doc)
     # add defined colors
     colors.add_colors(doc)
-    setup_document(doc)
+    docsetup.setup_document(doc)
     fill_document(doc)
     # compile latex file and pdf file
     doc.generate_tex()
