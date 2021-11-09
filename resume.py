@@ -1,10 +1,7 @@
 from pylatex import Document, Command, NoEscape
-from sections import heading, overview, work, experience, education
-import packages as pkgs
-import docsetup
-import colors
+from resume_sections import heading, overview, work, experience, education
+from resume_setups import packages as pkgs, docsetup, colors
 import json
-import os
 
 
 def fill_document(doc):
@@ -17,7 +14,7 @@ def fill_document(doc):
     education.add_education(doc, resume_data)
 
 
-def build_resume(debug, directory="./generated_resume/", filename="resume"):
+def build_resume(debug, filename="resume"):
     documentclass = Command("documentclass", options=("letterpaper", "11pt"), arguments="article")
     doc = Document(filename, documentclass=documentclass)
     # add resume layout required packages
