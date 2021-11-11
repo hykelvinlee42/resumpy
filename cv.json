@@ -1,0 +1,128 @@
+{
+  "contact": {
+    "name": "Ho Yin Kelvin Lee",
+    "work_email": "hyl30@sfu.ca",
+    "email": "hykelvinlee42@gmail.com",
+    "phone": "(778) 984-9842",
+    "personal_url": "https://hykelvinlee.com/",
+    "github_url": "https://github.com/hykelvinlee42",
+    "linkedin_url": "https://www.linkedin.com/in/hykelvinlee/"    
+  },
+  "research": [
+    {
+      "organization": "Simon Fraser University",
+      "organization_url": "https://www.sfu.ca/physics.html",
+      "title": "Undergraduate Research Assistant",
+      "duration": "Apr 2021 - Present",
+      "supervisor": "Dr. Joanna Woo",
+      "supervisor_url": "http://www.sfu.ca/~jwa304/",
+      "description": [
+        "Investigate changes in galaxies' densities during galaxy quenching",
+        "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "organization": "Emerge Global Experience",
+      "organization_url": "https://emergegx.com/",
+      "title": "Lead Software Developer",
+      "duration": "Jan 2021 - Present",
+      "description": [
+        "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
+        "Designed overall back-end structure for users data, program info e.g. and API methods with Google Firebase Firestore & Functions",
+        "Planned and oversaw the project in (3+ developers) team to ensure the main launch features (discussion community, customizable portfolio and video-based learning e.g.) are completed in seven months and within required budget"
+      ]
+    },
+    {
+      "organization": "NETGEAR",
+      "organization_url": "https://www.netgear.com/home/services/nighthawk-app/",
+      "title": "Software Developer",
+      "duration": "Sep 2019 - Apr 2020",
+      "description": [
+        "Diagnosed and addressed 100+ reported issues and assisted development teams with triaging customer and field issues",
+        "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective-C occasionally",
+        "Assisted with integrating business analytics tools and user-data protection within different networking protocols (SOAP and REST APIs) in the application"
+      ]
+    },
+    {
+      "organization": "NETGEAR",
+      "organization_url": "https://www.netgear.com/home/mobile-wifi/hotspots/",
+      "title": "Certification Engineer (Co-op)",
+      "duration": "Jan 2019 - Aug 2019",
+      "description": [
+        "Drove configuration management for multiple LTE and 5G mobile hotspot products based on regulatory requirements and built customized package for different carriers",
+        "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace",
+        "Developed and maintained automated software tools and build scripts to improve workflow process, data analysis and project test in LTE Advanced Carrier Aggregation combination using Python, C#, .NET framework, AT commands and Visual Basic"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Stable Matching Quantum Algorithm",
+      "url": "https://github.com/hykelvinlee42/quantum-stable-matching",
+      "nature": "Special Topics in Theoretical Computing Science - Intro to Quantum Computing",
+      "duration": "May 2021 - Jul 2021",
+      "description": [
+        "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
+        "Researched and designed search blackboxes for all entities in the proof of concept demo",
+        "Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+      ]
+    },
+    {
+      "title": "Variable Star Photometry",
+      "url": "https://github.com/hykelvinlee42/RRLeo-Photometry",
+      "nature": "Introduction to Observational Astrophysics",
+      "duration": "Jan 2021 - Apr 2021",
+      "description": [
+        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",
+        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)",
+        "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
+      ]
+    },
+    {
+      "title": "Anomaly Detection in Power Grid Data",
+      "url": "https://www.sfu.ca/outlines.html?2018/fall/cmpt/318/d100",
+      "nature": "Special Topic in Computing Science - Cybersecurity",
+      "duration": "Sep 2018 - Dec 2018",
+      "description": [
+        "Explored unlabelled data and gave seasonality of power grid usage trend by visualizing the data and using linear regression with R Language",
+        "Identified a valid time window and used Max-min method in detecting point anomaly",
+        "Used log-likelihood method for contextual anomaly detection by constructing and training a Hidden Markov Model with given training data"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Simon Fraser University",
+      "school_url": "https://www.sfu.ca/",
+      "degree": "B.Sc. Computing Science",
+      "completion": "2021"
+    }
+  ],
+  "award": [
+    {
+      "achievement": "Dean's Honour Roll",
+      "organizer": "Simon Fraser University",
+      "organizer_url": "https://www.sfu.ca/students/honour-rolls/deans-honour-roll/spring-2021.html",
+      "completion": "2021"
+    },
+    {
+      "achievement": "First Place",
+      "organizer": "FAS Competition, Simon Fraser University",
+      "organizer_url": "http://www.sfu.ca/fas/news-and-outreach/years/2019/student-teams-battle-eco-bots-at-fas-competition.htm",
+      "completion": "2019"
+    }
+  ],
+  "technique": [
+    "Python (+ astronomy and machine learning libraries \\& quantum computing frameworks)",
+    "C/C++",
+    "Matlab",
+    "R",
+    "SQL",
+    "Shell Scripts",
+    "UNIX",
+    "git",
+    "\\LaTeX"
+  ]
+}

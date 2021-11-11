@@ -1,0 +1,263 @@
+\documentclass[letterpaper,11pt]{article}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\RequirePackage[T1]{fontenc}%
+\usepackage{times}%
+\usepackage{calc}%
+\usepackage[shortcuts]{extdash}%
+\usepackage{graphicx}%
+\reversemarginpar%
+\usepackage[paper=letterpaper,marginparwidth=1.1in,marginparsep=.075in,margin=0.5in,tmargin=0.65in,includemp]{geometry}%
+\usepackage[shortlabels]{enumitem}%
+\usepackage{fancyhdr,lastpage}%
+\usepackage{color,hyperref}%
+\usepackage{doi}%
+\usepackage{url}%
+\usepackage{color}%
+%
+\definecolor{DarkBlue}{rgb}{0.0, 0.0, 0.3}%
+\setlength{\parindent}{0in}%
+\makeatletter%
+\newlength{\bibhang}%
+\setlength{\bibhang}{0em}%
+\newlength{\bibsep}%
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}%
+\newlist{bibsection}{itemize}{3}%
+\setlist[bibsection]{
+        label=,
+        leftmargin=\bibhang,
+        itemindent=-\bibhang,
+        itemsep=\bibsep,
+        parsep=\z@,
+        partopsep=0pt,
+        topsep=0pt
+    }%
+\newlist{bibenum}{enumerate}{3}%
+\setlist[bibenum]{
+        label=[\arabic*], resume
+        leftmargin={\bibhang + \widthof{[999]}},
+        itemindent=-\bibhang,
+        itemsep=0.05in,
+        parsep=\z@,
+        partopsep=0pt,
+        topsep=0pt
+    }%
+\let\oldendbibenum\endbibenum%
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}%
+\let\oldendbibsection\endbibsection%
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}%
+\makeatother%
+\pagestyle{fancy}%
+\pagestyle{empty}%
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}%
+\fancyfootoffset{\marginparsep+\marginparwidth}%
+\newlength{\footpageshift}%
+\setlength{\footpageshift}{0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}%
+\lfoot{
+        \hspace{\footpageshift}
+        \parbox{4in}{
+            \, \hfill
+            \arabic{page} of
+            \protect\pageref*{LastPage}
+            \hfill \,
+        }
+    }%
+\hypersetup{colorlinks,breaklinks,linkcolor=DarkBlue,urlcolor=DarkBlue,anchorcolor=DarkBlue,citecolor=DarkBlue}%
+\renewcommand{\section}[1]{\pagebreak[3]
+        \vspace{1.3\baselineskip}
+        \phantomsection\addcontentsline{toc}{section}{#1}
+        \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}
+        \vspace{-\baselineskip}\par
+    }%
+\newcommand*\fixendlist[1]{
+        \expandafter\let\csname
+        preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+        \expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}
+    }%
+\let\originalItem\item%
+\newcommand*\fixouterlist[1]{
+        \expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+        \expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+        \expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+        \expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}
+    }%
+\newcommand*\fixinnerlist[1]{
+        \expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+        \expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+        \expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+        \expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}
+    }%
+\newlist{outerlist}{itemize}{3}
+        \setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+        \fixendlist{outerlist}
+        \fixouterlist{outerlist}
+    %
+\newlist{lonelist}{itemize}{3}
+        \setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+        \fixendlist{lonelist}
+        \fixouterlist{lonelist}
+    %
+\newlist{innerlist}{itemize}{3}
+        \setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+        \fixinnerlist{innerlist}
+    %
+\newlist{loneinnerlist}{itemize}{3}
+        \setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+        \fixendlist{loneinnerlist}
+        \fixinnerlist{loneinnerlist}
+    %
+\newcommand{\blankline}{\quad\pagebreak[3]}%
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}%
+\urlstyle{same}%
+\newcommand{\cvHeading}[1]{
+        {\hspace{-\marginparsep minus \marginparwidth}
+        \begin{minipage}[t]{\textwidth + \marginparwidth + \marginparsep}
+            \centering
+            {\Large \bfseries {#1 - Curriculum Vitae}}\\
+            \vspace{0.1cm}
+            \rule{\columnwidth}{1.2pt}
+        \end{minipage}}
+        
+        }%
+%
+\begin{document}%
+\normalsize%
+\cvHeading{Ho Yin Kelvin Lee}%
+\vspace{0.2cm}%
+\section{Contact}%
+\label{sec:Contact}%
+\textbf{Work E-mail }%
+\href{mailto:hyl30@sfu.ca}{hyl30@sfu.ca}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Personal E-mail }%
+\href{mailto:hykelvinlee42@gmail.com}{hykelvinlee42@gmail.com}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Phone }%
+(778) 984-9842%
+
+\vspace{0.1cm}
+
+%
+\textbf{Portfolio Websites }%
+\href{https://hykelvinlee.com/}{Personal Website}%
+, %
+\href{https://github.com/hykelvinlee42}{GitHub}%
+, %
+\href{https://www.linkedin.com/in/hykelvinlee/}{LinkedIn}%
+
+%
+\section{Research Experience}%
+\label{sec:ResearchExperience}%
+\textbf{Undergraduate Research Assistant}%
+, %
+\href{https://www.sfu.ca/physics.html}{Simon Fraser University}%
+\hfill{Apr 2021 - Present}%
+\\Supervised by %
+\href{http://www.sfu.ca/~jwa304/}{Dr. Joanna Woo}%
+\begin{innerlist}%
+\item{Investigate changes in galaxies' densities during galaxy quenching}%
+\item{Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)}%
+\end{innerlist}%
+
+%
+\section{Academic Projects}%
+\label{sec:AcademicProjects}%
+\textbf{Stable Matching Quantum Algorithm}%
+\\ %
+\href{https://github.com/hykelvinlee42/quantum-stable-matching}{Special Topics in Theoretical Computing Science {-} Intro to Quantum Computing}%
+\hfill{May 2021 - Jul 2021}%
+\begin{innerlist}%
+\item{Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity}%
+\item{Researched and designed search blackboxes for all entities in the proof of concept demo}%
+\item{Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\% on Qiskit Aer quantum computing simulator}%
+\end{innerlist}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Variable Star Photometry}%
+\\ %
+\href{https://github.com/hykelvinlee42/RRLeo-Photometry}{Introduction to Observational Astrophysics}%
+\hfill{Jan 2021 - Apr 2021}%
+\begin{innerlist}%
+\item{Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)}%
+\item{Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)}%
+\item{Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results}%
+\end{innerlist}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Anomaly Detection in Power Grid Data}%
+\\ %
+\href{https://www.sfu.ca/outlines.html?2018/fall/cmpt/318/d100}{Special Topic in Computing Science {-} Cybersecurity}%
+\hfill{Sep 2018 - Dec 2018}%
+\begin{innerlist}%
+\item{Explored unlabelled data and gave seasonality of power grid usage trend by visualizing the data and using linear regression with R Language}%
+\item{Identified a valid time window and used Max-min method in detecting point anomaly}%
+\item{Used log-likelihood method for contextual anomaly detection by constructing and training a Hidden Markov Model with given training data}%
+\end{innerlist}%
+
+%
+\section{Education}%
+\label{sec:Education}%
+\textbf{B.Sc. Computing Science}%
+, %
+\href{https://www.sfu.ca/}{Simon Fraser University}%
+\hfill{2021}%
+
+%
+\section{Industry Experience}%
+\label{sec:IndustryExperience}%
+\textbf{Lead Software Developer}%
+, %
+\href{https://emergegx.com/}{Emerge Global Experience}%
+\hfill{Jan 2021 - Present}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Software Developer}%
+, %
+\href{https://www.netgear.com/home/services/nighthawk-app/}{NETGEAR}%
+\hfill{Sep 2019 - Apr 2020}%
+
+\vspace{0.1cm}
+
+%
+\textbf{Certification Engineer (Co-op)}%
+, %
+\href{https://www.netgear.com/home/mobile-wifi/hotspots/}{NETGEAR}%
+\hfill{Jan 2019 - Aug 2019}%
+
+%
+\section{Awards}%
+\label{sec:Awards}%
+\textbf{Dean's Honour Roll}%
+, %
+\href{https://www.sfu.ca/students/honour-rolls/deans-honour-roll/spring-2021.html}{Simon Fraser University}%
+\hfill{2021}%
+
+\vspace{0.1cm}
+
+%
+\textbf{First Place}%
+, %
+\href{http://www.sfu.ca/fas/news-and-outreach/years/2019/student-teams-battle-eco-bots-at-fas-competition.htm}{FAS Competition, Simon Fraser University}%
+\hfill{2019}%
+
+%
+\section{Competences}%
+\label{sec:Competences}%
+\textbf{Techniques }%
+Python (+ astronomy and machine learning libraries \& quantum computing frameworks), C/C++, Matlab, R, SQL, Shell Scripts, UNIX, git, \LaTeX, 
+
+%
+\end{document}
