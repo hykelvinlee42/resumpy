@@ -1,4 +1,4 @@
-from pylatex import Section, Command, UnsafeCommand, NoEscape
+from pylatex import Command, UnsafeCommand, NoEscape
 
 def add_heading(doc, resume_data):
     doc.append(UnsafeCommand("newcommand", "\\resumeHeading", options=8, extra_arguments=NoEscape(r"{}".format("""

@@ -1,6 +1,6 @@
-from pylatex import Document, Command, NoEscape
+from pylatex import Document, Command
 from resume_sections import heading, overview, work, experience, education
-from resume_setups import packages as pkgs, docsetup, colors
+from resume_setups import packages as pkgs, colors, docsetup
 import json
 
 
@@ -19,7 +19,6 @@ def build_resume(debug, filename="resume"):
     doc = Document(filename, documentclass=documentclass)
     # add resume layout required packages
     pkgs.add_packages(doc)
-    # add defined colors
     colors.add_colors(doc)
     docsetup.setup_document(doc)
     fill_document(doc)
