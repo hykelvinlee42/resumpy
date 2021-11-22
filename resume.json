@@ -35,7 +35,7 @@
           "title": "Lead Software Developer",
           "duration": "Jan 2021 - Present",
           "description": [
-            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
+            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS and setup CI/CD with GitHub Actions for the project",
             "Designed overall back-end structure for users data, program info e.g. and API methods with Google Firebase Firestore & Functions",
             "Planned and oversaw the project in (3+ developers) team to ensure the main launch features (discussion community, customizable portfolio and video-based learning e.g.) are completed in seven months and within required budget"
           ]
