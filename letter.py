@@ -9,7 +9,7 @@ import sys
 def fill_document(doc):
     resume_file = open("./resume.json")
     resume_data = json.load(resume_file)
-    heading.add_heading(doc, resume_data)
+    heading.add_heading(doc, resume_data, doc_type="letter")
     date = datetime.datetime.now()
     recipient = sys.argv[1] if len(sys.argv) > 1 else "Hiring Manager"
     letter_data = open("./letter.txt")
