@@ -11,7 +11,9 @@ packages = {
     "hyperref": "hidelinks",
     "fancyhdr": None,
     "tabularx": None,
-    "ulem": "normalem"
+    "ulem": "normalem",
+    "ragged2e": None,
+    "graphicx": None
 }
 
 
