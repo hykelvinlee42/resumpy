@@ -15,6 +15,7 @@ def setup_document(doc, doc_type="resume"):
     elif doc_type == "letter":
         doc.preamble.append(Command("addtolength", NoEscape("\\oddsidemargin"), extra_arguments=NoEscape("-0.15in")))
         doc.preamble.append(Command("addtolength", NoEscape("\\textwidth"), extra_arguments=NoEscape("0.05in")))
+        doc.preamble.append(Command("addtolength", NoEscape("\\marginparwidth"), extra_arguments=NoEscape("5in")))
 
     doc.preamble.append(Command("addtolength", NoEscape("\\topmargin"), extra_arguments=NoEscape("-.5in")))
     doc.preamble.append(Command("addtolength", NoEscape("\\textheight"), extra_arguments=NoEscape("1.0in")))
