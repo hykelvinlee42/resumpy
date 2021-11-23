@@ -7,7 +7,7 @@ def add_content(doc, date, reciepient, letter_data, resume_data, signature="Sign
         """))))
     
     doc.append(UnsafeCommand("newcommand", "\\addsignature", options="1", extra_arguments=NoEscape(r"{}".format("""
-        \\vspace{.1cm} \\includegraphics[width=4cm]{#1} \\\\
+        \\vspace{.1cm} \\hspace{-.5cm} \\includegraphics[width=4cm]{#1} \\\\
         """))))
 
     doc.append(Command("lettercontent", arguments=date.strftime("%B %d, %Y\n")))

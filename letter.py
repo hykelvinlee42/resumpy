@@ -21,7 +21,7 @@ def build_letter(debug, filename="cover-letter"):
     # add resume layout required packages
     pkgs.add_packages(doc)
     colors.add_colors(doc)
-    docsetup.setup_document(doc)
+    docsetup.setup_document(doc, doc_type="letter")
     fill_document(doc)
     # compile latex file and pdf file
     doc.generate_tex()

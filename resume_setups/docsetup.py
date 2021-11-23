@@ -1,6 +1,6 @@
 from pylatex import Command, NoEscape, UnsafeCommand
 
-def setup_document(doc):
+def setup_document(doc, doc_type="resume"):
     doc.preamble.append(Command("pagestyle", "fancy"))
     doc.preamble.append(Command("fancyhf", ""))
     doc.preamble.append(Command("fancyfoot", ""))
@@ -8,9 +8,15 @@ def setup_document(doc):
     doc.preamble.append(Command("renewcommand", NoEscape("\\headrulewidth"), extra_arguments="0pt"))
     doc.preamble.append(Command("renewcommand", NoEscape("\\footrulewidth"), extra_arguments="0pt"))
 
-    doc.preamble.append(Command("addtolength", NoEscape("\\oddsidemargin"), extra_arguments=NoEscape("-0.5in")))
-    doc.preamble.append(Command("addtolength", NoEscape("\\evensidemargin"), extra_arguments=NoEscape("0in")))
-    doc.preamble.append(Command("addtolength", NoEscape("\\textwidth"), extra_arguments=NoEscape("1in")))
+    if doc_type == "resume":
+        doc.preamble.append(Command("addtolength", NoEscape("\\oddsidemargin"), extra_arguments=NoEscape("-0.5in")))
+        doc.preamble.append(Command("addtolength", NoEscape("\\evensidemargin"), extra_arguments=NoEscape("0in")))
+        doc.preamble.append(Command("addtolength", NoEscape("\\textwidth"), extra_arguments=NoEscape("1in")))
+    elif doc_type == "letter":
+        doc.preamble.append(Command("addtolength", NoEscape("\\oddsidemargin"), extra_arguments=NoEscape("-0.15in")))
+        doc.preamble.append(Command("addtolength", NoEscape("\\textwidth"), extra_arguments=NoEscape("0.05in")))
+
+    doc.preamble.append(Command("addtolength", NoEscape("\\marginparwidth"), extra_arguments=NoEscape("5in")))
     doc.preamble.append(Command("addtolength", NoEscape("\\topmargin"), extra_arguments=NoEscape("-.5in")))
     doc.preamble.append(Command("addtolength", NoEscape("\\textheight"), extra_arguments=NoEscape("1.0in")))
 
