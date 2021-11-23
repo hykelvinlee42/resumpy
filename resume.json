@@ -73,7 +73,7 @@
       "nature": "Python Development",
       "duration": "Sep 2021 - Present",
       "description": [
-        "Developed Python scripts for automate clean documents generation of resume, CV and cover letter in PDF format (this resume is generated using this software)",
+        "Developed Python scripts for automate clean documents generation of resume, CV and cover letter in PDF format (this resume is generated using Resumpy)",
         "Designed parsing mechanism of JSON data to generic document components and layout settings written in \\LaTeX",
         "Implemented the modules in a form of deployable dockerized RESTful API service using Python Flask framework"
       ]
@@ -87,6 +87,17 @@
         "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
         "Researched and designed search blackboxes for all entities in the proof of concept demo",
         "Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+      ]
+    },
+    {
+      "title": "Variable Star Photometry",
+      "url": "https://github.com/hykelvinlee42/RRLeo-Photometry",
+      "nature": "Introduction to Observational Astrophysics, SFU",
+      "duration": "Jan 2021 - Apr 2021",
+      "description": [
+        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",
+        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)",
+        "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
       ]
     },
     {
