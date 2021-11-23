@@ -116,3 +116,9 @@ dmypy.json
 # PyLatex generated files
 *.aux
 *.out
+
+# generated cover letter files
+cover-letter.pdf
+cover-letter.tex
+letter.txt
+Signature.png
