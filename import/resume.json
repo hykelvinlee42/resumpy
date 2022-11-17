@@ -10,17 +10,32 @@
     "email": "hykelvinlee42@gmail.com"
   },
   "overview": [
-    "Computing science graduate with 3+ years industry (software testing & development) and research experience (astrophysics & quantum algorithms)",
+    "Computing science graduate with 4+ years industry (software testing & development) and research experience (astrophysics & quantum algorithms)",
     "A fast learner who is experienced in working in team centric and fast pace environments",
-    "Proficient in OOP languages, C/C++ & Swift, as well data analysis language, Python"
+    "Proficient in C/C++, Python & Swift, and experience with cloud computing services like Amazon Web Service (AWS) & Google Cloud Platform (GCP)",
+    "Proficient in data analysis frameworks, such as NumPy, Pandas, Matplotlib & SciPy"
   ],
   "work": [
+    {
+      "organization": "McMaster University",
+      "positions": [
+        {
+          "title": "Research Software Developer",
+          "duration": "Feb 2022 - Present",
+          "description": [
+            "Developed and optimized software components, tools and systems that support McMaster's researchers and research facilities",
+            "Developed a complex project plan to the development of a laboratory information management system by defining requirements with stakeholders",
+            "Provide expertise and working knowledge of web application components and software engineering to implement the LIMS system and prepare operations documentation"
+          ]
+        }
+      ]
+    },
     {
       "organization": "Simon Fraser University",
       "positions": [
         {
           "title": "Undergraduate Research Assistant",
-          "duration": "Apr 2021 - Present",
+          "duration": "Apr 2021 - Aug 2022",
           "description": [
             "Supervised by Dr. Joanna Woo to investigate changes in galaxies' densities during galaxy quenching",
             "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)"
@@ -35,9 +50,10 @@
           "title": "Lead Software Developer",
           "duration": "Jan 2021 - Present",
           "description": [
-            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS and setup CI/CD with GitHub Actions for the project",
-            "Designed overall back-end structure for users data, program info e.g. and API methods with Google Firebase Firestore & Functions",
-            "Planned and oversaw the project in (3+ developers) team to ensure the main launch features (discussion community, customizable portfolio and video-based learning e.g.) are completed in seven months and within required budget"
+            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
+            "Implemented various development, testing, automation tools, as well as continuous integration and continuous development (CI/CD) pipeline in GitHub Actions workflows",
+            "Conducted frequent business needs accessments to provide accurate operational feasibility evaluation and technical requirements to management team in a non-technical manner",
+            "Provided supports to developers and created an engaging and collaborative environment in a small development team"
           ]
         }
       ]
@@ -49,8 +65,8 @@
           "title": "Software Developer",
           "duration": "Sep 2019 - Apr 2020",
           "description": [
-            "Diagnosed and addressed 100+ reported issues and assisted development teams with triaging customer and field issues",
-            "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective-C occasionally",
+            "Diagnosed and addressed 100+ issues and assisted development team with triaging customer and field issues",
+            "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective-C",
             "Assisted with integrating business analytics tools and user-data protection within different networking protocols (SOAP and REST APIs) in the application"
           ]
         },
@@ -59,8 +75,7 @@
           "duration": "Jan 2019 - Aug 2019",
           "description": [
             "Drove configuration management for multiple LTE and 5G mobile hotspot products based on regulatory requirements and built customized package for different carriers",
-            "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace",
-            "Developed and maintained automated software tools and build scripts to improve workflow process, data analysis and project test in LTE Advanced Carrier Aggregation combination using Python, C#, .NET framework, AT commands and Visual Basic"
+            "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace"
           ]
         }
       ]
@@ -75,7 +90,7 @@
       "description": [
         "Developed Python scripts for automate clean documents generation of resume, CV and cover letter in PDF format (this resume is generated using Resumpy)",
         "Designed parsing mechanism of JSON data to generic document components and layout settings written in \\LaTeX",
-        "Implemented the modules in a form of deployable dockerized RESTful API service using Python Flask framework"
+        "Implemented the modules in a form of deployable dockerized REST API service using Flask framework"
       ]
     },
     {
