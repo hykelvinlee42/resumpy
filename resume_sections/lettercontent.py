@@ -12,7 +12,8 @@ def add_content(doc, date, recipient, letter_data, resume_data, signature="Signa
 
     doc.append(Command("lettercontent", arguments=date.strftime("%B %d, %Y\n")))
     doc.append(Command("lettercontent", arguments="Dear {},\n".format(recipient)))
-    for line in letter_data.readlines():
+    letter_data_lines = [line for line in letter_data.readlines() if line != "\n"]
+    for line in letter_data_lines:
         doc.append(Command("lettercontent", arguments="{}".format(line)))
     
     doc.append(Command("lettercontent", arguments="Sincerely,"))
