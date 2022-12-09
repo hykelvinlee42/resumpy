@@ -1,9 +1,9 @@
 {
   "contact": {
     "name": "Ho Yin Kelvin Lee",
-    "work_email": "hyl30@sfu.ca",
+    "work_email": "lee887@mcmaster.ca",
     "email": "hykelvinlee42@gmail.com",
-    "phone": "(778) 984-9842",
+    "phone": "+1 (778) 984-9842",
     "personal_url": "https://hykelvinlee.com/",
     "github_url": "https://github.com/hykelvinlee42",
     "linkedin_url": "https://www.linkedin.com/in/hykelvinlee/"    
@@ -13,7 +13,7 @@
       "organization": "Simon Fraser University",
       "organization_url": "https://www.sfu.ca/physics.html",
       "title": "Undergraduate Research Assistant",
-      "duration": "Apr 2021 - Present",
+      "duration": "Apr 2021 - Aug 2022",
       "supervisor": "Dr. Joanna Woo",
       "supervisor_url": "http://www.sfu.ca/~jwa304/",
       "description": [
@@ -23,6 +23,17 @@
     }
   ],
   "work": [
+    {
+      "organization": "McMaster University",
+      "organization_url": "https://research.mcmaster.ca/",
+      "title": "Research Software Developer",
+      "duration": "Feb 2022 - Present",
+      "description": [
+        "Developed and optimized software components, tools and systems that support McMaster's researchers and research facilities",
+        "Developed a complex project plan to the development of a laboratory information management system by defining requirements with stakeholders",
+        "Provide expertise and working knowledge of web application components and software engineering to implement the LIMS system and prepare operations documentation"
+      ]
+    },
     {
       "organization": "Emerge Global Experience",
       "organization_url": "https://emergegx.com/",
@@ -110,12 +121,12 @@
     {
       "achievement": "First Place",
       "organizer": "FAS Competition, Simon Fraser University",
-      "organizer_url": "http://www.sfu.ca/fas/news-and-outreach/years/2019/student-teams-battle-eco-bots-at-fas-competition.htm",
+      "organizer_url": "https://www.sfu.ca/fas/news-and-outreach/years/2019/student-teams-battle-eco-bots-at-fas-competition.html",
       "completion": "2019"
     }
   ],
   "technique": [
-    "Python (+ astronomy and machine learning libraries \\& quantum computing frameworks)",
+    "Python (+ machine learning \\& astronomy libraries and quantum computing frameworks)",
     "C/C++",
     "Matlab",
     "R",

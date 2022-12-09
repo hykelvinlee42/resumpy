@@ -22,9 +22,8 @@ def add_experience(doc, cv_data):
     
     with doc.create(Section("Academic Projects")):
         for index, experience in enumerate(cv_data["experience"]):
-            doc.append(Command("textbf", arguments=NoEscape(experience["title"])))
-            doc.append(NoEscape("\\\\ "))
-            doc.append(Command("href", arguments=NoEscape(experience["url"]), extra_arguments=experience["nature"]))
+            doc.append(Command("textbf", arguments=(experience["title"] + " - ")))
+            doc.append(Command("href", arguments=NoEscape(experience["url"]), extra_arguments="Project Link"))
             doc.append(Command("hfill", arguments=NoEscape(experience["duration"])))
             doc.append(Command("begin", arguments="innerlist"))
             for description in experience["description"]:
