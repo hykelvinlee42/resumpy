@@ -8,13 +8,15 @@ import os
 
 
 def fill_document(doc):
-    resume_file = open("./import/resume.json")
+    resume_file = open("./import/resume.json", "r")
     resume_data = json.load(resume_file)
     heading.add_heading(doc, resume_data, doc_type="letter")
     date = datetime.datetime.now()
     recipient = sys.argv[1] if len(sys.argv) > 1 else "Hiring Manager"
-    letter_data = open("./import/letter.txt")
+    letter_data = open("./import/letter.txt", "r")
     lettercontent.add_content(doc, date, recipient, letter_data, resume_data)
+    resume_file.close()
+    letter_data.close()
 
 
 def build_letter(debug, filename="cover-letter"):

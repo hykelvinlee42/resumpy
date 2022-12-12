@@ -13,6 +13,7 @@ def fill_document(doc):
     work.add_work_experience(doc, resume_data)
     experience.add_experience(doc, resume_data)
     education.add_education(doc, resume_data)
+    resume_file.close()
 
 
 def build_resume(debug, filename="resume"):

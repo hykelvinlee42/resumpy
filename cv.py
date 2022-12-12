@@ -15,6 +15,7 @@ def fill_document(doc):
     work.add_work_experience(doc, cv_data)
     reward.add_reward(doc, cv_data)
     competence.add_competence(doc, cv_data)
+    cv_file.close()
 
 
 def build_cv(debug, filename="CV"):
