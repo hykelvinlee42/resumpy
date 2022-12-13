@@ -96,7 +96,7 @@
     {
       "title": "Stable Matching Quantum Algorithm",
       "url": "https://github.com/hykelvinlee42/quantum-stable-matching",
-      "nature": "Special Topics in Theoretical Computing Science - Intro to Quantum Computing, SFU",
+      "nature": "Research in Theoretical Computing (Academic)",
       "duration": "May 2021 - Jul 2021",
       "description": [
         "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
@@ -107,7 +107,7 @@
     {
       "title": "Variable Star Photometry",
       "url": "https://github.com/hykelvinlee42/RRLeo-Photometry",
-      "nature": "Introduction to Observational Astrophysics, SFU",
+      "nature": "Research Data Analysis (Academic)",
       "duration": "Jan 2021 - Apr 2021",
       "description": [
         "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",
@@ -128,7 +128,7 @@
     },
     {
       "title": "Easy Text",
-      "url": "http://www.easy-text.com",
+      "url": "https://www.easy-text.com",
       "nature": "Python/ReactJS Development",
       "duration": "Jan 2020 - Sep 2020",
       "description": [
