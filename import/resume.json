@@ -17,15 +17,28 @@
   ],
   "work": [
     {
+        "organization": "The Hospital for Sick Children (SickKids)",
+        "positions": [
+          {
+            "title": "Clinical Research Project Assistant",
+            "duration": "Jan 2023 - Present",
+            "description": [
+                "Maintain and develop iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
+                "Develop a web-based data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial"
+            ]
+          }
+        ]
+    },
+    {
       "organization": "McMaster University",
       "positions": [
         {
           "title": "Research Software Developer",
           "duration": "Feb 2022 - Present",
           "description": [
-            "Developed and optimized software components, tools and systems that support McMaster's researchers and research facilities",
-            "Developed a complex project plan to the development of a laboratory information management system by defining requirements with stakeholders",
-            "Provide expertise and working knowledge of web application components and software engineering to implement the LIMS system and prepare operations documentation"
+            "Develop and optimize software components, tools and systems that support McMaster's researchers and research facilities",
+            "Work on ways to automate and improve development and release processes by building and setting up new research development tools and infrastructure",
+            "Provide expertise and working knowledge of web application components & software engineering to implement the various research projects"
           ]
         }
       ]
@@ -38,7 +51,7 @@
           "duration": "Apr 2021 - Aug 2022",
           "description": [
             "Supervised by Dr. Joanna Woo to investigate changes in galaxies' densities during galaxy quenching",
-            "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high performance computing clusters (HPC)"
+            "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters (HPC)"
           ]
         }
       ]
@@ -48,7 +61,7 @@
       "positions": [
         {
           "title": "Lead Software Developer",
-          "duration": "Jan 2021 - Present",
+          "duration": "Jan 2021 - Apr 2023",
           "description": [
             "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
             "Implemented various development, testing, automation tools, as well as continuous integration and continuous development (CI/CD) pipeline in GitHub Actions workflows",
