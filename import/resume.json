@@ -23,8 +23,9 @@
             "title": "Clinical Research Project Assistant",
             "duration": "Jan 2023 - Present",
             "description": [
-                "Maintain and develop iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
-                "Develop a web-based data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial"
+                "Maintain and develop native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
+                "Develop a web-based data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
+                "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support"
             ]
           }
         ]
@@ -38,7 +39,7 @@
           "description": [
             "Develop and optimize software components, tools and systems that support McMaster's researchers and research facilities",
             "Work on ways to automate and improve development and release processes by building and setting up new research development tools and infrastructure",
-            "Provide expertise and working knowledge of web application components & software engineering to implement the various research projects"
+            "Provide expertise and working knowledge of (web-based) software engineering to implement the various research projects"
           ]
         }
       ]
