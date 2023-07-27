@@ -16,6 +16,8 @@ def add_contact(doc, cv_data):
         doc.append(NoEscape("\n\\vspace{0.1cm}\n\n"))
 
         doc.append(Command("textbf", arguments="Portfolio Websites" + " "))
+        doc.append(Command("href", arguments=NoEscape(cv_data["contact"]["orcid"]), extra_arguments="ORCID"))
+        doc.append(", ")
         doc.append(Command("href", arguments=NoEscape(cv_data["contact"]["personal_url"]), extra_arguments="Personal Website"))
         doc.append(", ")
         doc.append(Command("href", arguments=NoEscape(cv_data["contact"]["github_url"]), extra_arguments="GitHub"))
