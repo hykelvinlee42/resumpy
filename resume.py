@@ -1,8 +1,10 @@
-from pylatex import Document, Command
-from resume_sections import heading, overview, work, experience, education
-from resume_setups import packages as pkgs, colors, docsetup
 import json
-import os
+import shutil
+
+from pylatex import Command, Document
+from resume_sections import education, experience, heading, overview, work
+from resume_setups import colors, docsetup
+from resume_setups import packages as pkgs
 
 
 def fill_document(doc):
@@ -29,8 +31,8 @@ def build_resume(debug, filename="resume"):
     doc.generate_pdf(clean=False, clean_tex=False, compiler="lualatex")
     doc.generate_pdf(clean=(not debug), clean_tex=False, compiler="lualatex")  # compile twice in order for transparent package to work, reference: https://tex.stackexchange.com/questions/297294/pdflatex-transparent-package-seems-not-to-work
     # move files to export directory
-    os.rename("./{0}.pdf".format(filename), "./export/{0}.pdf".format(filename))
-    os.rename("./{0}.tex".format(filename), "./export/{0}.tex".format(filename))
+    shutil.move("./{0}.pdf".format(filename), "./export/{0}.pdf".format(filename))
+    shutil.move("./{0}.tex".format(filename), "./export/{0}.tex".format(filename))
 
 
 if __name__ == "__main__":

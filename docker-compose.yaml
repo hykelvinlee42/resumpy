@@ -1,0 +1,11 @@
+services:
+  debian:
+    build: .
+    volumes:
+      - ./cv_sections:/runtime/cv_sections:ro
+      - ./cv_setups:/runtime/cv_setups:ro
+      - ./export:/runtime/export:rw
+      - ./fonts:/runtime/fonts:ro
+      - ./import:/runtime/import:ro
+      - ./resume_sections:/runtime/resume_sections:ro
+      - ./resume_setups:/runtime/resume_setups:ro
