@@ -6,8 +6,10 @@
     "github_url": "https://github.com/hykelvinlee42",
     "linkedin_handle": "hykelvinlee",
     "linkedin_url": "https://www.linkedin.com/in/hykelvinlee/",
+    "orcid": "https://orcid.org/0009-0000-7340-3204",
     "phone": "+1 (778) 984-9842",
-    "email": "hykelvinlee42@gmail.com"
+    "email": "hykelvinlee42@gmail.com",
+    "work_email": "lee887@mcmaster.ca"
   },
   "overview": [
     "Computing science graduate with 5+ years industry (software testing & development) and research experience",
@@ -129,35 +131,15 @@
         "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)",
         "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
       ]
-    },
-    {
-      "title": "Bluetooth HID Relay",
-      "url": "https://github.com/hykelvinlee42/RN42-HID-Relay",
-      "nature": "Arduino/C++ Development",
-      "duration": "Jul 2020 - Sep 2020",
-      "description": [
-        "Designed hardware schematic to connect Arduino (Uno), USB host shield and RN42 Bluetooth module as a keyboard relay adaptor",
-        "Developed driver code in C++ to read keyboard inputs through USB host shield and broadcast input signals via Bluetooth",
-        "Improved driver code efficiency in power consumption and included software support for N-keys rollover"
-      ]
-    },
-    {
-      "title": "Easy Text",
-      "url": "https://www.easy-text.com",
-      "nature": "Python/ReactJS Development",
-      "duration": "Jan 2020 - Sep 2020",
-      "description": [
-        "Created text scraping from web page module and texts summarizing module using Python with integration of Google Cloud Platform Natural Language model",
-        "Deployed the module in a form of RESTful API service on Google Cloud Platform App Engine using Python Flask framework",
-        "Created responsive layout website which takes user input (text or URL) then sends and retrieves requests to the Flask server with ReactJS and Semantic UI React framework"
-      ]
     }
   ],
   "education": [
     {
       "school": "Simon Fraser University",
-      "degree": "Bachelor of Science, Majoring in Computing Science",
-      "duration": "Sept 2016 - Dec 2021"
+      "school_url": "https://www.sfu.ca/",
+      "degree": "Bachelor of Science, Computing Science",
+      "duration": "Sept 2016 - Dec 2021",
+      "completion": "2021"
     }
   ]
 }
