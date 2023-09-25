@@ -10,25 +10,25 @@
     "email": "hykelvinlee42@gmail.com"
   },
   "overview": [
-    "Computing science graduate with 4+ years industry (software testing & development) and research experience (astrophysics & quantum algorithms)",
+    "Computing science graduate with 5+ years industry (software testing & development) and research experience",
     "A fast learner who is experienced in working in team centric and fast pace environments",
-    "Proficient in C/C++, Python & Swift, and experience with cloud computing services like Amazon Web Service (AWS) & Google Cloud Platform (GCP)",
+    "Proficient in C/C++, Python, TypeScript & Swift, and experience with cloud computing services like Amazon Web Service (AWS) & Google Cloud Platform (GCP)",
     "Proficient in data analysis frameworks, such as NumPy, Pandas, Matplotlib & SciPy"
   ],
   "work": [
     {
-        "organization": "The Hospital for Sick Children (SickKids)",
-        "positions": [
-          {
-            "title": "Clinical Research Project Assistant",
-            "duration": "Jan 2023 - Present",
-            "description": [
-                "Maintain and develop native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
-                "Develop a web-based data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
-                "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support"
-            ]
-          }
-        ]
+      "organization": "The Hospital for Sick Children (SickKids)",
+      "positions": [
+        {
+          "title": "Clinical Research Project Assistant",
+          "duration": "Jan 2023 - Present",
+          "description": [
+            "Independently develop and maintain native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of an international research program",
+            "Develop a React web data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
+            "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support"
+          ]
+        }
+      ]
     },
     {
       "organization": "McMaster University",
@@ -37,9 +37,10 @@
           "title": "Research Software Developer",
           "duration": "Feb 2022 - Present",
           "description": [
-            "Develop and optimize software components, tools and systems that support McMaster's researchers and research facilities",
-            "Work on ways to automate and improve development and release processes by building and setting up new research development tools and infrastructure",
-            "Provide expertise and working knowledge of (web-based) software engineering to implement the various research projects"
+            "Work as part of an agile development team to develop and optimize software tools that support McMaster's researchers and research facilities",
+            "Design system architecture and involve in direct development for a web-based transcription platform that integrates OpenAI’s Whisper APIs and conforms Accessibility for Ontarians with Disabilities Act (AODA) using Next.js and Material UI",
+            "Provide expertise and working knowledge of software engineering in a research context by delivering learning module documentation and workshop-style presentation to researchers",
+            "Derive principles and practices of research data management to develop an institutional suggestion for research software management and planning"
           ]
         }
       ]
@@ -51,8 +52,8 @@
           "title": "Undergraduate Research Assistant",
           "duration": "Apr 2021 - Aug 2022",
           "description": [
-            "Supervised by Dr. Joanna Woo to investigate changes in galaxies' densities during galaxy quenching",
-            "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters (HPC)"
+            "Investigated changes in galaxies’ centre mass densities during galaxy quenching and blackholes’ masses correlations",
+            "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters"
           ]
         }
       ]
@@ -64,9 +65,9 @@
           "title": "Lead Software Developer",
           "duration": "Jan 2021 - Apr 2023",
           "description": [
-            "Developed the front-end and back-end for a skills learning platform using ReactJS and NodeJS",
+            "Developed front-end and back-end for a skills learning platform using ReactJS and NodeJS",
             "Implemented various development, testing, automation tools, as well as continuous integration and continuous development (CI/CD) pipeline in GitHub Actions workflows",
-            "Conducted frequent business needs accessments to provide accurate operational feasibility evaluation and technical requirements to management team in a non-technical manner",
+            "Conducted frequent business needs assessments to provide accurate operational feasibility evaluation and technical requirements to management team in a non-technical manner",
             "Provided supports to developers and created an engaging and collaborative environment in a small development team"
           ]
         }
@@ -80,7 +81,7 @@
           "duration": "Sep 2019 - Apr 2020",
           "description": [
             "Diagnosed and addressed 100+ issues and assisted development team with triaging customer and field issues",
-            "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift in Xcode IDE and Objective-C",
+            "Assisted with developing and optimizing front-end UI features based on engineers and UX requirements mainly using language Swift and Objective-C",
             "Assisted with integrating business analytics tools and user-data protection within different networking protocols (SOAP and REST APIs) in the application"
           ]
         },
@@ -115,13 +116,13 @@
       "description": [
         "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
         "Researched and designed search blackboxes for all entities in the proof of concept demo",
-        "Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+        "Designed method to compute stability of all possible stable matches and return the most stable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
       ]
     },
     {
       "title": "Variable Star Photometry",
       "url": "https://github.com/hykelvinlee42/RRLeo-Photometry",
-      "nature": "Research Data Analysis (Academic)",
+      "nature": "Research in Observational Astrophysics (Academic)",
       "duration": "Jan 2021 - Apr 2021",
       "description": [
         "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",

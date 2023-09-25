@@ -18,8 +18,8 @@
         "supervisor": "Dr. Samantha Stephens",
         "supervisor_url": "https://www.linkedin.com/in/samanthalstephens/",
         "description": [
-            "Maintain and develop native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
-            "Develop a web-based data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
+            "Independently develop and maintain native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of a international research program",
+            "Develop a React web data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
             "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support"
         ]
     },
@@ -31,8 +31,8 @@
       "supervisor": "Dr. Joanna Woo",
       "supervisor_url": "http://www.sfu.ca/~jwa304/",
       "description": [
-        "Investigated changes in galaxies' densities during galaxy quenching",
-        "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters (HPC)"
+        "Investigated changes in galaxies’ centre mass densities during galaxy quenching and blackholes’ masses correlations",
+        "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters"
       ]
     }
   ],
@@ -71,7 +71,7 @@
       "description": [
         "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
         "Researched and designed search blackboxes for all entities in the proof of concept demo",
-        "Designed method to compute stability of all possible stable matches and return the moststable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+        "Designed method to compute stability of all possible stable matches and return the most stable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
       ]
     },
     {
@@ -91,7 +91,7 @@
       "nature": "Special Topic in Computing Science - Cybersecurity",
       "duration": "Sep 2018 - Dec 2018",
       "description": [
-        "Explored unlabelled data and gave seasonality of power grid usage trend by visualizing the data and using linear regression with R Language",
+        "Explored unlabeled data and gave seasonality of power grid usage trend by visualizing the data and using linear regression with R",
         "Identified a valid time window and used Max-min method in detecting point anomaly",
         "Used log-likelihood method for contextual anomaly detection by constructing and training a Hidden Markov Model with given training data"
       ]
