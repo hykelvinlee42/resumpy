@@ -25,9 +25,10 @@
           "title": "Clinical Research Project Assistant",
           "duration": "Jan 2023 - Present",
           "description": [
-            "Independently develop and maintain native iOS application, ATOMIC, that connects youth with Multiple Sclerosis to information and support for living a healthy active life as part of an international research program",
-            "Develop a React web data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviors resulting from our clinical trial",
-            "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support"
+            "Examine association between high level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis",
+            "Independently develop and maintain native iOS application, ATOMIC, to connect youth with Multiple Sclerosis to information and support for living a healthy active life as part of an international research program",
+            "Develop a React web data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviours resulting from our clinical trial",
+            "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support for the ATOMIC iOS and web applications"
           ]
         }
       ]
@@ -92,7 +93,8 @@
           "duration": "Jan 2019 - Aug 2019",
           "description": [
             "Drove configuration management for multiple LTE and 5G mobile hotspot products based on regulatory requirements and built customized package for different carriers",
-            "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace"
+            "Triaged and tracked customer issues then coordinated with firmware, software and certification team for troubleshooting issues in a fast pace agile workplace",
+            "Developed and maintained automated software tools and build scripts to improve workflow process, data analysis and project test in LTE Advanced Carrier Aggregation combination using various languages and frameworks (e.g. Python, C\\# with .NET framework, AT commands and Visual Basic)"
           ]
         }
       ]
@@ -127,8 +129,8 @@
       "nature": "Research in Observational Astrophysics (Academic)",
       "duration": "Jan 2021 - Apr 2021",
       "description": [
-        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (SEP e.g.)",
-        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (luminosity periodicity in variable stars e.g.)",
+        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (e.g. SEP)",
+        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (e.g. luminosity periodicity in variable stars)",
         "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
       ]
     }
