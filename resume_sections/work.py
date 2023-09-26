@@ -27,7 +27,7 @@ def add_work_experience(doc, resume_data):
                     doc.append(Command("resumeWorkNullCompany", arguments=NoEscape(position["title"]), extra_arguments=NoEscape(position["duration"])))
 
                 for description in position["description"]:
-                    doc.append(Command("resumeItem", arguments=description))
+                    doc.append(Command("resumeItem", arguments=NoEscape(description)))
 
                 doc.append(Command("resumeItemListEnd"))
 
