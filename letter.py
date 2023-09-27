@@ -4,6 +4,7 @@ import shutil
 import sys
 
 from pylatex import Command, Document
+
 from resume_sections import heading, lettercontent
 from resume_setups import colors, docsetup
 from resume_setups import packages as pkgs
@@ -22,7 +23,9 @@ def fill_document(doc):
 
 
 def build_letter(debug, filename="cover-letter"):
-    documentclass = Command("documentclass", options=("letterpaper", "11pt"), arguments="article")
+    documentclass = Command(
+        "documentclass", options=("letterpaper", "11pt"), arguments="article"
+    )
     doc = Document(filename, documentclass=documentclass)
     # add resume layout required packages
     pkgs.add_packages(doc)
@@ -32,7 +35,9 @@ def build_letter(debug, filename="cover-letter"):
     # compile latex file and pdf file
     doc.generate_tex()
     doc.generate_pdf(clean=False, clean_tex=False, compiler="lualatex")
-    doc.generate_pdf(clean=(not debug), clean_tex=False, compiler="lualatex")  # compile twice in order for transparent package to work, reference: https://tex.stackexchange.com/questions/297294/pdflatex-transparent-package-seems-not-to-work
+    doc.generate_pdf(
+        clean=(not debug), clean_tex=False, compiler="lualatex"
+    )  # compile twice in order for transparent package to work, reference: https://tex.stackexchange.com/questions/297294/pdflatex-transparent-package-seems-not-to-work
     # move files to export directory
     shutil.move("./{0}.pdf".format(filename), "./export/{0}.pdf".format(filename))
     shutil.move("./{0}.tex".format(filename), "./export/{0}.tex".format(filename))

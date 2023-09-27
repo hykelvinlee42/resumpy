@@ -13,7 +13,7 @@ packages = {
     "tabularx": None,
     "ulem": "normalem",
     "ragged2e": None,
-    "graphicx": None
+    "graphicx": None,
 }
 
 

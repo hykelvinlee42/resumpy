@@ -1,4 +1,4 @@
-from pylatex import Section, Command, NoEscape
+from pylatex import Command, NoEscape, Section
 
 
 def add_education(doc, cv_data):
@@ -6,7 +6,13 @@ def add_education(doc, cv_data):
         for index, education in enumerate(cv_data["education"]):
             doc.append(Command("textbf", arguments=NoEscape(education["degree"])))
             doc.append(", ")
-            doc.append(Command("href", arguments=NoEscape(education["school_url"]), extra_arguments=education["school"]))
+            doc.append(
+                Command(
+                    "href",
+                    arguments=NoEscape(education["school_url"]),
+                    extra_arguments=education["school"],
+                )
+            )
             doc.append(Command("hfill", arguments=NoEscape(education["completion"])))
             if index == len(cv_data["education"]) - 1:
                 doc.append(NoEscape("\n\n\n"))

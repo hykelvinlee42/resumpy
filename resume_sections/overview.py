@@ -1,10 +1,20 @@
-from pylatex import Section, Command, UnsafeCommand, NoEscape
+from pylatex import Command, NoEscape, Section, UnsafeCommand
 
 
 def add_overview(doc, resume_data):
-    doc.append(UnsafeCommand("newcommand", "\\resumeOverview", extra_arguments=NoEscape(r"{}".format("""
+    doc.append(
+        UnsafeCommand(
+            "newcommand",
+            "\\resumeOverview",
+            extra_arguments=NoEscape(
+                r"{}".format(
+                    """
         \\item\\resumeItemListStart
-        """))))
+        """
+                )
+            ),
+        )
+    )
     with doc.create(Section("OVERVIEW")):
         doc.append(Command("resumeSubHeadingListStart"))
         doc.append(Command("resumeOverview"))

@@ -1,6 +1,4 @@
-colors = {
-    "DarkBlue": ["rgb", "0.0, 0.0, 0.3"]
-}
+colors = {"DarkBlue": ["rgb", "0.0, 0.0, 0.3"]}
 
 
 def add_colors(doc):
