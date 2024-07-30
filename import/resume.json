@@ -9,7 +9,7 @@
     "orcid": "https://orcid.org/0009-0000-7340-3204",
     "phone": "+1 (778) 984-9842",
     "email": "hykelvinlee42@gmail.com",
-    "work_email": "lee887@mcmaster.ca"
+    "work_email": ["lee887@mcmaster.ca", "hoyinkelvin.lee@sickkids.ca"]
   },
   "overview": [
     "Computing science graduate with 5+ years industry (software testing & development) and research experience",
