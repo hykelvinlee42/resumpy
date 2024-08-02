@@ -1,12 +1,19 @@
 import json
 import shutil
+import sys
 
-from pylatex import Command, Document
-
-from cv_sections import (competence, contact, education, experience, heading,
-                         reward, work)
+from cv_sections import (
+    competence,
+    contact,
+    education,
+    experience,
+    heading,
+    reward,
+    work,
+)
 from cv_setups import colors, docsetup
 from cv_setups import packages as pkgs
+from pylatex import Command, Document
 
 
 def fill_document(doc):
@@ -22,7 +29,7 @@ def fill_document(doc):
     cv_file.close()
 
 
-def build_cv(debug, filename="CV"):
+def build_cv(debug, compiler, filename="CV"):
     documentclass = Command(
         "documentclass", options=("letterpaper", "11pt"), arguments="article"
     )
@@ -34,9 +41,9 @@ def build_cv(debug, filename="CV"):
     fill_document(doc)
     # compile latex file and pdf file
     doc.generate_tex()
-    doc.generate_pdf(clean=False, clean_tex=False, compiler="lualatex")
+    doc.generate_pdf(clean=False, clean_tex=False, compiler=compiler)
     doc.generate_pdf(
-        clean=(not debug), clean_tex=False, compiler="lualatex"
+        clean=(not debug), clean_tex=False, compiler=compiler
     )  # compile twice in order for transparent package to work, reference: https://tex.stackexchange.com/questions/297294/pdflatex-transparent-package-seems-not-to-work
     # move files to export directory
     shutil.move("./{0}.pdf".format(filename), "./export/{0}.pdf".format(filename))
@@ -44,4 +51,10 @@ def build_cv(debug, filename="CV"):
 
 
 if __name__ == "__main__":
-    build_cv(debug=False)
+    compiler = None
+    try:
+        compiler = sys.argv[1]
+    except:
+        pass
+
+    build_cv(debug=False, compiler=compiler)
