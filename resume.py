@@ -3,6 +3,7 @@ import shutil
 import sys
 
 from pylatex import Command, Document
+
 from resume_sections import education, experience, heading, overview, work
 from resume_setups import colors, docsetup
 from resume_setups import packages as pkgs
