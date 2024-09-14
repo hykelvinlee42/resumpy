@@ -123,6 +123,21 @@
       "completion": "2019"
     }
   ],
+  "license": [
+    {
+        "title": "TCPS 2: CORE-2022 (Course on Research Ethics)",
+        "issuer": "Panel on Research Ethics",
+        "issuer_url": "http://tcps2core.ca/welcome",
+        "issued": "Dec 2023"
+    },
+    {
+        "title": "Canada GCP - Research Coordinator/Assistant 1",
+        "issuer": "Collaborative Institutional Training Initiative",
+        "issuer_url": "https://www.citiprogram.org/verify/?w863ec4d4-5ec7-4d72-a8ff-2be72bd60ee5-59908595",
+        "issued": "Dec 2023",
+        "expiration": "Dec 2026"
+    }
+  ],
   "technique": [
     "Python (+ machine learning \\& astronomy libraries and quantum computing frameworks)",
     "C/C++",

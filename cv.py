@@ -2,12 +2,19 @@ import json
 import shutil
 import sys
 
-from pylatex import Command, Document
-
-from cv_sections import (competence, contact, education, experience, heading,
-                         reward, work)
+from cv_sections import (
+    competence,
+    contact,
+    education,
+    experience,
+    heading,
+    license,
+    reward,
+    work,
+)
 from cv_setups import colors, docsetup
 from cv_setups import packages as pkgs
+from pylatex import Command, Document
 
 
 def fill_document(doc):
@@ -18,6 +25,7 @@ def fill_document(doc):
     experience.add_experience(doc, cv_data)
     education.add_education(doc, cv_data)
     work.add_work_experience(doc, cv_data)
+    license.add_license(doc, cv_data)
     reward.add_reward(doc, cv_data)
     competence.add_competence(doc, cv_data)
     cv_file.close()
