@@ -9,7 +9,10 @@
     "orcid": "https://orcid.org/0009-0000-7340-3204",
     "phone": "+1 (778) 984-9842",
     "email": "hykelvinlee42@gmail.com",
-    "work_email": "lee887@mcmaster.ca"
+    "work_email": [
+      "lee887@mcmaster.ca",
+      "hoyinkelvin.lee@sickkids.ca"
+    ]
   },
   "research": [
     {
@@ -126,17 +129,17 @@
   ],
   "license": [
     {
-        "title": "TCPS 2: CORE-2022 (Course on Research Ethics)",
-        "issuer": "Panel on Research Ethics",
-        "issuer_url": "http://tcps2core.ca/welcome",
-        "issued": "Dec 2023"
+      "title": "TCPS 2: CORE-2022 (Course on Research Ethics)",
+      "issuer": "Panel on Research Ethics",
+      "issuer_url": "http://tcps2core.ca/welcome",
+      "issued": "Dec 2023"
     },
     {
-        "title": "Canada GCP - Research Coordinator/Assistant 1",
-        "issuer": "Collaborative Institutional Training Initiative",
-        "issuer_url": "https://www.citiprogram.org/verify/?w863ec4d4-5ec7-4d72-a8ff-2be72bd60ee5-59908595",
-        "issued": "Dec 2023",
-        "expiration": "Dec 2026"
+      "title": "Canada GCP - Research Coordinator/Assistant 1",
+      "issuer": "Collaborative Institutional Training Initiative",
+      "issuer_url": "https://www.citiprogram.org/verify/?w863ec4d4-5ec7-4d72-a8ff-2be72bd60ee5-59908595",
+      "issued": "Dec 2023",
+      "expiration": "Dec 2026"
     }
   ],
   "technique": [
