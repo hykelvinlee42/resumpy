@@ -9,7 +9,7 @@
     "orcid": "https://orcid.org/0009-0000-7340-3204",
     "phone": "+1 (778) 984-9842",
     "email": "hykelvinlee42@gmail.com",
-    "work_email": ["lee887@mcmaster.ca", "hoyinkelvin.lee@sickkids.ca"]
+    "work_email": "lee887@mcmaster.ca"
   },
   "research": [
     {
@@ -21,9 +21,9 @@
       "supervisor_url": "https://www.linkedin.com/in/samanthalstephens/",
       "description": [
         "Examine association between high level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis",
-        "Independently develop and maintain native iOS application, ATOMIC, to connect youth with Multiple Sclerosis to information and support for living a healthy active life as part of an international research program",
-        "Develop a React web data dashboard, which allows coaching staff and researchers to manipulate, visualize and better understand real-time data and behaviours resulting from our clinical trial",
-        "Analyze, design, prototype, develop, test in the software development lifecycle as well as provide end-user support for the ATOMIC iOS and web applications"
+        "Assess and implement consumer-grade wearables (e.g., Fitbit, Apple Watch) in pediatric clinical trials, focusing on technical considerations and practical applications",
+        "Develop and maintain native iOS application, ATOMIC, designed to provide youth with multiple sclerosis access to information and support for a healthy, active lifestyle as part of an international research program",
+        "Develop and maintain a web-based data dashboard for clinical trials, enabling coaching staff and researchers to manipulate, visualize, and analyze real-time data and behaviours"
       ]
     },
     {
@@ -34,8 +34,9 @@
       "supervisor": "Dr. Joanna Woo",
       "supervisor_url": "http://www.sfu.ca/~jwa304/",
       "description": [
-        "Investigated changes in galaxies’ centre mass densities during galaxy quenching and blackholes’ masses correlations",
-        "Processed IllustrisTNG cosmological magnetohydrodynamical simulations data to statistically visualize compaction effect at the end of galaxies evolution on high-performance computing clusters"
+        "Investigated changes in central mass densities of galaxies during quenching and analyzed correlations with blackhole masses",
+        "Processed data from cosmological magnetohydrodynamical simulations (IllustrisTNG) to statistically visualize the compaction effect at the end of galaxy evolution using high-performance computing clusters",
+        "Hosted outreach activities to discuss research findings and engaged with the regional astronomy community"
       ]
     }
   ],
