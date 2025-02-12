@@ -9,7 +9,10 @@
     "orcid": "https://orcid.org/0009-0000-7340-3204",
     "phone": "+1 (778) 984-9842",
     "email": "hykelvinlee42@gmail.com",
-    "work_email": "lee887@mcmaster.ca"
+    "work_email": [
+      "lee887@mcmaster.ca",
+      "hoyinkelvin.lee@sickkids.ca"
+    ]
   },
   "overview": [
     "Computing science graduate with 5+ years industry (software testing & development) and research experience",
@@ -40,9 +43,10 @@
           "title": "Research Software Developer",
           "duration": "Feb 2022 - Present",
           "description": [
-            "Work as part of an agile development team to create and optimize various software tools that support McMaster's researchers and research facilities",
+            "Work as part of an agile development team to create, maintain and optimize various software tools that support McMaster's researchers and research facilities",
+            "Contribute to open source software projects that support research activities by triaging and patching issues",
             "Derive principles and practices of research data management to develop institutional recommendations for research software management and planning, promoting FAIR principles, open science, and research reproducibility",
-            "Deliver expertise in software engineering within a research context by creating learning module documentation and conducting workshop-style presentations on topics such as web accessibility and containerization for researchers"
+            "Deliver expertise in software engineering within a research context by creating training materials and conducting workshop-style presentations on topics such as web accessibility, generative artificial intelligence and containerization for researchers"
           ]
         }
       ]
@@ -55,7 +59,7 @@
           "duration": "Apr 2021 - Aug 2022",
           "description": [
             "Investigated changes in central mass densities of galaxies during quenching and analyzed correlations with blackhole masses",
-            "Processed data from cosmological magnetohydrodynamical simulations (IllustrisTNG) to statistically visualize the compaction effect at the end of galaxy evolution using high-performance computing clusters",
+            "Processed data from cosmological magnetohydrodynamical simulations (IllustrisTNG) to statistically visualize the compaction effect at the end of galaxy evolution using (SLURM-based) high-performance computing clusters",
             "Hosted outreach activities to discuss research findings and engaged with the regional astronomy community"
           ]
         }
@@ -94,7 +98,7 @@
       "description": [
         "Developed Python scripts for automate clean documents generation of resume, CV and cover letter in PDF format (this resume is generated using Resumpy)",
         "Designed parsing mechanism of JSON data to generic document components and layout settings written in \\LaTeX",
-        "Implemented the modules in a form of deployable dockerized REST API service using Flask framework"
+        "Implemented the modules in a form of deployable containerized REST API service using Flask framework"
       ]
     },
     {
