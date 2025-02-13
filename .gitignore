@@ -118,7 +118,6 @@ dmypy.json
 *.out
 
 # generated cover letter files
-cover-letter.pdf
-cover-letter.tex
+export/cover-letter*
 letter.txt
 Signature.png

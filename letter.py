@@ -4,7 +4,6 @@ import shutil
 import sys
 
 from pylatex import Command, Document
-
 from resume_sections import heading, lettercontent
 from resume_setups import colors, docsetup
 from resume_setups import packages as pkgs
@@ -15,7 +14,7 @@ def fill_document(doc):
     resume_data = json.load(resume_file)
     heading.add_heading(doc, resume_data, doc_type="letter")
     date = datetime.datetime.now()
-    recipient = sys.argv[1] if len(sys.argv) > 1 else "Hiring Manager"
+    recipient = sys.argv[2] if len(sys.argv) > 2 else "Hiring Manager"
     letter_data = open("./import/letter.txt", "r")
     lettercontent.add_content(doc, date, recipient, letter_data, resume_data)
     resume_file.close()
