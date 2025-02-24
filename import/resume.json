@@ -16,7 +16,7 @@
   },
   "overview": [
     "Computing science graduate with 5+ years industry (software testing & development) and research experience",
-    "A fast learner who is experienced in working in team centric and fast pace environments",
+    "A fast learner who is experienced in working in team-centric and fast-paced environments",
     "Proficient in C/C++, Python, TypeScript & Swift, and experience with cloud computing services like Amazon Web Service (AWS) & Google Cloud Platform (GCP)",
     "Proficient in data analysis frameworks, such as NumPy, Pandas, Matplotlib & SciPy"
   ],
@@ -28,9 +28,9 @@
           "title": "Clinical Research Project Assistant",
           "duration": "Jan 2023 - Present",
           "description": [
-            "Examine association between high level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis",
+            "Examine the association between high-level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis",
             "Assess and implement consumer-grade wearables (e.g., Fitbit, Apple Watch) in pediatric clinical trials, focusing on technical considerations and practical applications",
-            "Develop and maintain native iOS application, ATOMIC, designed to provide youth with multiple sclerosis access to information and support for a healthy, active lifestyle as part of an international research program",
+            "Develop and maintain a native iOS application, ATOMIC, designed to provide youth with multiple sclerosis access to information and support for a healthy, active lifestyle as part of an international research program",
             "Develop and maintain a web-based data dashboard for clinical trials, enabling coaching staff and researchers to manipulate, visualize, and analyze real-time data and behaviours"
           ]
         }
@@ -44,7 +44,7 @@
           "duration": "Feb 2022 - Present",
           "description": [
             "Work as part of an agile development team to create, maintain and optimize various software tools that support McMaster's researchers and research facilities",
-            "Contribute to open source software projects that support research activities by triaging and patching issues",
+            "Contribute to open-source software projects that support research activities by triaging and patching issues",
             "Derive principles and practices of research data management to develop institutional recommendations for research software management and planning, promoting FAIR principles, open science, and research reproducibility",
             "Deliver expertise in software engineering within a research context by creating training materials and conducting workshop-style presentations on topics such as web accessibility, generative artificial intelligence and containerization for researchers"
           ]
@@ -60,7 +60,7 @@
           "description": [
             "Investigated changes in central mass densities of galaxies during quenching and analyzed correlations with blackhole masses",
             "Processed data from cosmological magnetohydrodynamical simulations (IllustrisTNG) to statistically visualize the compaction effect at the end of galaxy evolution using (SLURM-based) high-performance computing clusters",
-            "Hosted outreach activities to discuss research findings and engaged with the regional astronomy community"
+            "Hosted outreach activities to discuss research findings and engage with the regional astronomy community"
           ]
         }
       ]
@@ -89,6 +89,7 @@
       ]
     }
   ],
+  "volunteer": [],
   "experience": [
     {
       "title": "Resumpy",
@@ -96,9 +97,9 @@
       "nature": "Python Development",
       "duration": "Sep 2021 - Present",
       "description": [
-        "Developed Python scripts for automate clean documents generation of resume, CV and cover letter in PDF format (this resume is generated using Resumpy)",
+        "Developed Python scripts for automating clean document generation of resumes, CVs and cover letters in PDF format (this resume is generated using Resumpy)",
         "Designed parsing mechanism of JSON data to generic document components and layout settings written in \\LaTeX",
-        "Implemented the modules in a form of deployable containerized REST API service using Flask framework"
+        "Implemented the modules in the form of deployable containerized REST API service using Flask"
       ]
     },
     {
@@ -108,8 +109,8 @@
       "duration": "May 2021 - Jul 2021",
       "description": [
         "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
-        "Researched and designed search blackboxes for all entities in the proof of concept demo",
-        "Designed method to compute stability of all possible stable matches and return the most stable matching pair with an accuracy of 75\\% on Qiskit Aer quantum computing simulator"
+        "Researched and designed search black boxes for all entities in the proof of concept demo",
+        "Designed a method to compute the stability of all possible stable matches and return the most stable matching pair with an accuracy of 75\\% on the Qiskit Aer quantum computing simulator"
       ]
     },
     {
@@ -119,7 +120,7 @@
       "duration": "Jan 2021 - Apr 2021",
       "description": [
         "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (e.g. SEP)",
-        "Applied numerous operations on dataset with and derived meaningful information using domain knowledge in astrophysics (e.g. luminosity periodicity in variable stars)",
+        "Applied numerous operations on the dataset and derived meaningful information using domain knowledge in astrophysics (e.g. luminosity periodicity in variable stars)",
         "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
       ]
     }
