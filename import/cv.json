@@ -14,6 +14,14 @@
       "hoyinkelvin.lee@sickkids.ca"
     ]
   },
+  "interests": [
+    "Interdisciplinary research software development",
+    "Health informatics",
+    "Mobile health and wellness apps",
+    "Wearable devices",
+    "Meta-research on FAIR scholarly outputs and research reproducibility",
+    "(Open) Science policy"
+  ],
   "research": [
     {
       "organization": "The Hospital for Sick Children (SickKids)",
@@ -157,17 +165,5 @@
       "issued": "Dec 2023",
       "expiration": "Dec 2026"
     }
-  ],
-  "technique": [
-    "Python (+ machine learning \\& astronomy libraries and quantum computing frameworks)",
-    "C/C++",
-    "JavaScript/TypeScript (+ web development frameworks)",
-    "Matlab",
-    "R",
-    "SQL",
-    "Shell Scripts",
-    "UNIX",
-    "git",
-    "\\LaTeX"
   ]
 }
