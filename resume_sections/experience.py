@@ -21,7 +21,7 @@ def add_experience(doc, resume_data):
             ),
         )
     )
-    with doc.create(Section("RELATED EXPERIENCE")):
+    with doc.create(Section("Related Experience".upper())):
         doc.append(Command("resumeSubHeadingListStart"))
         for project in resume_data["experience"]:
             link_and_name = Command(

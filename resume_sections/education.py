@@ -20,7 +20,7 @@ def add_education(doc, resume_data):
             ),
         )
     )
-    with doc.create(Section("EDUCATION")):
+    with doc.create(Section("Education".upper())):
         doc.append(Command("resumeSubHeadingListStart"))
         for education in resume_data["education"]:
             doc.append(

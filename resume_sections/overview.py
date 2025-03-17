@@ -15,7 +15,7 @@ def add_overview(doc, resume_data):
             ),
         )
     )
-    with doc.create(Section("OVERVIEW")):
+    with doc.create(Section("Overview".upper())):
         doc.append(Command("resumeSubHeadingListStart"))
         doc.append(Command("resumeOverview"))
         for overview in resume_data["overview"]:

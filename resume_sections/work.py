@@ -39,7 +39,7 @@ def add_work_experience(doc, resume_data):
             ),
         )
     )
-    with doc.create(Section("WORK EXPERIENCE")):
+    with doc.create(Section("Work Experience".upper())):
         doc.append(Command("resumeSubHeadingListStart"))
         for work in resume_data["work"]:
             for index, position in enumerate(work["positions"]):
