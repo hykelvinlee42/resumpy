@@ -23,10 +23,10 @@
       "supervisor": "Dr. Samantha Stephens",
       "supervisor_url": "https://www.linkedin.com/in/samanthalstephens/",
       "description": [
-        "Examine the association between high-level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis",
-        "Assess and implement consumer-grade wearables (e.g., Fitbit, Apple Watch) in pediatric clinical trials, focusing on technical considerations and practical applications",
-        "Develop and maintain a native iOS application, ATOMIC, designed to provide youth with multiple sclerosis access to information and support for a healthy, active lifestyle as part of an international research program",
-        "Develop and maintain a web-based data dashboard for clinical trials, enabling coaching staff and researchers to manipulate, visualize, and analyze real-time data and behaviours"
+        "Examined the association between high-level moderation to physical activities \\& social networking and less fatigue \\& depression among youth with multiple sclerosis, and assessed the technical considerations and practical applications of consumer-grade wearables (e.g., Fitbit, Apple Watch) in pediatric clinical trials",
+        "Developed and maintained ATOMIC, a native iOS application (using Swift and SwiftUI) designed to support youth with multiple sclerosis by providing access to health information and engagement tools as part of an international research intervention program",
+        "Integrated wearable and health data sources, including Fitbit, Apple Watch (using Apple CoreMotion, SensorKit and HealthKit), Firebase Realtime Database and REDCap, to automate real-time physical activity tracking within ATOMIC",
+        "Built and optimized a web-based data dashboard for clinical trials (using Next.js, Python and Firebase Cloud Functions) to enable real-time data analysis, visualization, and participant monitoring for coaching staff and researchers"
       ]
     },
     {
@@ -37,9 +37,10 @@
       "supervisor": "Dr. Joanna Woo",
       "supervisor_url": "http://www.sfu.ca/~jwa304/",
       "description": [
-        "Investigated changes in central mass densities of galaxies during quenching and analyzed correlations with blackhole masses",
-        "Processed data from cosmological magnetohydrodynamical simulations (IllustrisTNG) to statistically visualize the compaction effect at the end of galaxy evolution using (SLURM-based) high-performance computing clusters",
-        "Hosted outreach activities to discuss research findings and engage with the regional astronomy community"
+        "Analyzed central mass density variations in galaxies during quenching, identifying correlations with black hole masses",
+        "Processed and visualized large-scale cosmological magnetohydrodynamical simulations (\\href{https://www.tng-project.org/}{IllustrisTNG}) to study the compaction effect at the end of galaxy evolution",
+        "Executed high-performance computations scripts (developed in Python, NumPy, Matplotlib and Astropy) on a \\href{https://docs.alliancecan.ca/wiki/Cedar}{SLURM-based HPC cluster}",
+        "Led outreach initiatives, presenting research findings to regional astronomy communities and academic audiences, fostering public engagement in astrophysics research"
       ]
     }
   ],
@@ -49,12 +50,6 @@
       "organization_url": "https://research.mcmaster.ca/home/support-for-researchers/research-resources/research-software-development/",
       "title": "Research Software Developer",
       "duration": "Feb 2022 - Present"
-    },
-    {
-      "organization": "Emerge Global Experience",
-      "organization_url": "https://emergegx.com/",
-      "title": "Lead Software Developer",
-      "duration": "Jan 2021 - Apr 2023"
     },
     {
       "organization": "NETGEAR",
@@ -69,7 +64,27 @@
       "duration": "Jan 2019 - Aug 2019"
     }
   ],
-  "volunteer": [],
+  "governance": [
+    {
+      "organization": "Canadian Science Policy Centre",
+      "organization_url": "https://sciencepolicy.ca/about-cspc/volunteers/",
+      "title": "Evaluation and Reports Committee Member",
+      "duration": "Mar 2025 - Present"
+    },
+    {
+      "organization": "Canadian Science Policy Centre",
+      "organization_url": "https://sciencepolicy.ca/about-cspc/volunteers/",
+      "title": "Grant Writing and Research Committee Member",
+      "duration": "Feb 2025 - Present"
+    },
+    {
+      "organization": "Research Software Alliance",
+      "organization_url": "https://www.researchsoft.org/taskforces/",
+      "title": "Actionable FAIR Research Software Guidelines Task Force",
+      "duration": "Nov 2024 - Present"
+    }
+  ],
+  "editorials": [],
   "experience": [
     {
       "title": "Stable Matching Quantum Algorithm",
@@ -77,9 +92,9 @@
       "nature": "Research in Theoretical Computing (Academic)",
       "duration": "May 2021 - Jul 2021",
       "description": [
-        "Utilized Grover’s algorithm and designed a quantum algorithm ($O(n\\sqrt{n})$) which outperformed the classical Gale-Shapley stable matching algorithm ($O(n^2)$) in terms of time complexity",
-        "Researched and designed search black boxes for all entities in the proof of concept demo",
-        "Designed a method to compute the stability of all possible stable matches and return the most stable matching pair with an accuracy of 75\\% on the Qiskit Aer quantum computing simulator"
+        "Developed a quantum algorithm leveraging Grover’s search to solve the stable matching problem with $O(n\\sqrt{n})$ complexity, significantly outperforming the classical Gale-Shapley algorithm ($O(n^2)$)",
+        "Designed and implemented search black boxes for all entities, optimizing quantum state representation and improving computational efficiency",
+        "Engineered a stability evaluation method to analyze all possible stable matches, achieving 75\\% accuracy on the Qiskit Aer quantum computing simulator"
       ]
     },
     {
@@ -88,9 +103,9 @@
       "nature": "Research in Observational Astrophysics (Academic)",
       "duration": "Jan 2021 - Apr 2021",
       "description": [
-        "Compiled a calibrated dataset from raw data with Python by reducing the effects of atmospheric extinction and cosmic rays with Python and several astrophysics packages (e.g. SEP)",
-        "Applied numerous operations on the dataset and derived meaningful information using domain knowledge in astrophysics (e.g. luminosity periodicity in variable stars)",
-        "Produced an observation proposal regarding the ideal target and telescope usage time calculation and a journal paper with methodology, calculation results and graphical results"
+        "Developed an observation proposal detailing optimal target selection and telescope usage time calculations, contributing to an article with methodology, results and visual data representations",
+        "Processed and calibrated astronomical imaging data using Python and astrophysics libraries (e.g. \\href{https://pypi.org/project/sep/}{SEP}) to correct for atmospheric extinction and cosmic rays, improving data accuracy",
+        "Analyzed luminosity periodicity in variable stars by applying statistical and computational techniques, identifying patterns relevant to astrophysical research"
       ]
     },
     {
@@ -99,9 +114,9 @@
       "nature": "Academic Project in Cybersecurity",
       "duration": "Sep 2018 - Dec 2018",
       "description": [
-        "Explored unlabeled data and gave seasonality of power grid usage trend by visualizing the data and using linear regression with R",
-        "Identified a valid time window and used Max-min method in detecting point anomaly",
-        "Used log-likelihood method for contextual anomaly detection by constructing and training a Hidden Markov Model with given training data"
+        "Analyzed unlabeled power grid data to identify seasonal usage trends using data visualization and linear regression using R",
+        "Detected point anomalies by implementing the Max-Min method within a validated time window, improving anomaly identification accuracy",
+        "Developed a Hidden Markov Model to perform contextual anomaly detection using log-likelihood estimation, enhancing predictive accuracy based on historical patterns"
       ]
     }
   ],
