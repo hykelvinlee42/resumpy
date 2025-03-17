@@ -3,8 +3,7 @@ import shutil
 import sys
 
 from pylatex import Command, Document
-
-from resume_sections import education, experience, heading, overview, work
+from resume_sections import education, experience, heading, overview, volunteering, work
 from resume_setups import colors, docsetup
 from resume_setups import packages as pkgs
 
@@ -15,6 +14,7 @@ def fill_document(doc):
     heading.add_heading(doc, resume_data)
     overview.add_overview(doc, resume_data)
     work.add_work_experience(doc, resume_data)
+    volunteering.add_volunteering(doc, resume_data)
     experience.add_experience(doc, resume_data)
     education.add_education(doc, resume_data)
     resume_file.close()

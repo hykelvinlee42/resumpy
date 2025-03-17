@@ -1,11 +1,11 @@
 from pylatex import Command, NoEscape, Section, UnsafeCommand
 
 
-def add_work_experience(doc, resume_data):
+def add_volunteering(doc, resume_data):
     doc.append(
         UnsafeCommand(
             "newcommand",
-            "\\resumeWork",
+            "\\resumeVolunteetingServices",
             options="3",
             extra_arguments=NoEscape(
                 r"{}".format(
@@ -15,7 +15,6 @@ def add_work_experience(doc, resume_data):
         \\avenirheavy{#1}\\vspace{1pt}\\\\
         \\avenir{#2} & {\\color{TextBlack} \\avenir \\small #3}\\\\
         \\end{tabular*}\\vspace{-4pt}
-        \\resumeItemListStart
         """
                 )
             ),
@@ -24,29 +23,28 @@ def add_work_experience(doc, resume_data):
     doc.append(
         UnsafeCommand(
             "newcommand",
-            "\\resumeWorkNullCompany",
+            "\\resumeVolunteetingServicesNullOrganization",
             options="2",
             extra_arguments=NoEscape(
                 r"{}".format(
                     """
-        \\vspace{-15pt}\\item
+        \\vspace{-20pt}\\item
         \\begin{tabular*}\\textwidth[t]{l@{\\extracolsep{\\fill}}r}\\\\
         \\avenir{#1} & {\\color{TextBlack} \\avenir \\small #2}\\\\
         \\end{tabular*}\\vspace{-4pt}
-        \\resumeItemListStart
         """
                 )
             ),
         )
     )
-    with doc.create(Section("Work Experience".upper())):
+    with doc.create(Section("Volunteering and Services".upper())):
         doc.append(Command("resumeSubHeadingListStart"))
-        for work in resume_data["work"]:
+        for work in resume_data["volunteer"]:
             for index, position in enumerate(work["positions"]):
                 if index == 0:
                     doc.append(
                         Command(
-                            "resumeWork",
+                            "resumeVolunteetingServices",
                             arguments=NoEscape(work["organization"]),
                             extra_arguments=[
                                 NoEscape(position["title"]),
@@ -57,15 +55,10 @@ def add_work_experience(doc, resume_data):
                 else:
                     doc.append(
                         Command(
-                            "resumeWorkNullCompany",
+                            "resumeVolunteetingServicesNullOrganization",
                             arguments=NoEscape(position["title"]),
                             extra_arguments=NoEscape(position["duration"]),
                         )
                     )
-
-                for description in position["description"]:
-                    doc.append(Command("resumeItem", arguments=NoEscape(description)))
-
-                doc.append(Command("resumeItemListEnd"))
 
         doc.append(Command("resumeSubHeadingListEnd"))

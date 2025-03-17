@@ -2,7 +2,7 @@ from pylatex import Command, NoEscape, Section
 
 
 def add_experience(doc, cv_data):
-    with doc.create(Section("Research Experience")):
+    with doc.create(Section("Academic Research Experience")):
         for index, research in enumerate(cv_data["research"]):
             doc.append(Command("textbf", arguments=NoEscape(research["title"])))
             doc.append(", ")
@@ -34,7 +34,8 @@ def add_experience(doc, cv_data):
 
     with doc.create(Section("Academic Projects")):
         for index, experience in enumerate(cv_data["experience"]):
-            doc.append(Command("textbf", arguments=(experience["title"] + " - ")))
+            doc.append(Command("textbf", arguments=NoEscape(f"{experience["title"]} ")))
+            doc.append("- ")
             doc.append(
                 Command(
                     "href",

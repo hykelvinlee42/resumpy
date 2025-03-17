@@ -2,12 +2,20 @@ import json
 import shutil
 import sys
 
-from pylatex import Command, Document
-
-from cv_sections import (competence, contact, education, experience, heading,
-                         license, reward, work)
+from cv_sections import (
+    competence,
+    contact,
+    education,
+    experience,
+    heading,
+    license,
+    reward,
+    volunteering,
+    work,
+)
 from cv_setups import colors, docsetup
 from cv_setups import packages as pkgs
+from pylatex import Command, Document
 
 
 def fill_document(doc):
@@ -15,18 +23,20 @@ def fill_document(doc):
     cv_data = json.load(cv_file)
     heading.add_heading(doc, cv_data)
     contact.add_contact(doc, cv_data)
-    experience.add_experience(doc, cv_data)
     education.add_education(doc, cv_data)
+    experience.add_experience(doc, cv_data)
     work.add_work_experience(doc, cv_data)
+    volunteering.add_committees(doc, cv_data)
+    # volunteering.add_editorials(doc, cv_data)
     license.add_license(doc, cv_data)
     reward.add_reward(doc, cv_data)
     competence.add_competence(doc, cv_data)
     cv_file.close()
 
 
-def build_cv(debug, compiler, filename="CV"):
+def build_cv(debug, compiler, filename="cv"):
     documentclass = Command(
-        "documentclass", options=("letterpaper", "11pt"), arguments="article"
+        "documentclass", options=("letterpaper", "10pt"), arguments="article"
     )
     doc = Document(filename, documentclass=documentclass, fontenc=None, inputenc=None)
     # add resume layout required packages

@@ -2,10 +2,9 @@ from pylatex import Command, NoEscape, Section
 
 
 def add_reward(doc, cv_data):
-    with doc.create(Section("Awards")):
+    with doc.create(Section("Honours and Awards")):
         for index, award in enumerate(cv_data["award"]):
-            doc.append(Command("textbf", arguments=NoEscape(award["achievement"])))
-            doc.append(", ")
+            doc.append(f"{award["achievement"]}, ")
             doc.append(
                 Command(
                     "href",
