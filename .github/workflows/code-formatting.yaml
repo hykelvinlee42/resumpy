@@ -3,8 +3,8 @@ name: Format code
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push events but only for the master branch
-  push:
-    branches: [ master, main ]
+  # push:
+  #   branches: [ master, main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
