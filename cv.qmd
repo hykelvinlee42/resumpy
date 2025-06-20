@@ -1,0 +1,135 @@
+---
+author:
+    - name:
+        given: Ho Yin Kelvin
+        family: Lee
+      email:
+        - hykelvinlee42@gmail.com
+        - lee887@mcmaster.ca
+        - hoyinkelvin.lee@sickkids.ca
+      url:
+        - https://hykelvinlee.com/
+        - https://github.com/hykelvinlee42
+        - https://www.linkedin.com/in/hykelvinlee
+      orcid: 0009-0000-7340-3204
+jupyter: python3
+execute:
+  eval: true
+  echo: false
+  output: asis
+format:
+    cv-pdf: default
+---
+
+# Research Interests
+
+```{python}
+import json
+from IPython.display import display, Markdown
+
+cv_file = open("import/cv.json")
+cv_data = json.load(cv_file)
+cv_file.close()
+```
+
+```{python}
+display(Markdown(", ".join(cv_data["interests"])))
+```
+
+<!-- empty block -->
+
+# Education
+
+```{python}
+education_entry = """
+\\textbf{{{degree}}}, \\href{{{school_url}}}{{{school}}}
+\\hfill {completion}
+"""
+
+for education in cv_data["education"]:
+    display(Markdown(education_entry.format(degree=education["degree"], school_url=education["school_url"], school=education["school"], completion=education["completion"])))
+```
+
+# Honours and Awards
+
+```{python}
+award_entry = """
+{achievement}, \\href{{{organizer_url}}}{{{organizer}}}
+\\hfill {completion}
+"""
+
+for award in cv_data["award"]:
+    display(Markdown(award_entry.format(achievement=award["achievement"], organizer_url=award["organizer_url"], organizer=award["organizer"], completion=award["completion"])))
+```
+
+# Academic Research Experience
+
+```{python}
+research_entry = """
+\\textbf{{{title}}} - \\href{{{organization_url}}}{{{organization}}}
+\\hfill {duration} \\
+Supervised by \\href{{{supervisor_url}}}{{{supervisor}}}
+\\vspace{{0.1cm}}
+"""
+
+for research in cv_data["research"]:
+    display(Markdown(research_entry.format(title=research["title"], organization_url=research["organization_url"], organization=research["organization"], duration=research["duration"], supervisor_url=research["supervisor_url"], supervisor=research["supervisor"])))
+    display(Markdown("\\begin{innerlist}"))
+    for description in research["description"]:
+        display(Markdown(f"\\item {description}"))
+
+    display(Markdown("\\end{innerlist}\\vspace{0.2cm}")) 
+```
+
+# Academic Projects
+
+```{python}
+project_entry = """
+\\textbf{{{title}}} - \\href{{{url}}}{{Project Link}}
+\\hfill {duration}
+\\vspace{{0.1cm}}
+"""
+
+for project in cv_data["experience"]:
+    display(Markdown(project_entry.format(title=project["title"], url=project["url"], duration=project["duration"])))
+    display(Markdown("\\begin{innerlist}"))
+    for description in project["description"]:
+        display(Markdown(f"\\item {description}"))
+
+    display(Markdown("\\end{innerlist}\\vspace{0.2cm}"))
+```
+
+# Professional Experience
+
+```{python}
+work_entry = """
+{title}, \\href{{{organization_url}}}{{{organization}}}
+\\hfill {duration}\\vspace{{0.1cm}}
+"""
+
+for work in cv_data["work"]:
+    display(Markdown(work_entry.format(title=work["title"], organization_url=work["organization_url"], organization=work["organization"], duration=work["duration"])))
+```
+
+# Governance & Oversight Committees
+
+```{python}
+for governance in cv_data["governance"]:
+    display(Markdown(f"{governance["duration"]}: {governance["title"]} \\href{{{governance["organization_url"]}}}{{{governance["organization"]}}}\\vspace{{0.1cm}}\n"))
+```
+
+# Professional Memberships & Licenses
+
+```{python}
+license_entry = """
+{title}, \\href{{{issuer_url}}}{{{issuer}}} \\
+Issued {issued}. 
+"""
+
+for license in cv_data["license"]:
+    entry = license_entry.format(title=license["title"], issuer_url=license["issuer_url"], issuer=license["issuer"], issued=license["issued"])
+    if "expiration" in license:
+        entry += f"Expires {license["expiration"]}."
+
+    display(Markdown(f"{entry}\\vspace{{0.1cm}}"))
+```

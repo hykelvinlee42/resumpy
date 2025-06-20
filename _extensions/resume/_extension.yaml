@@ -1,0 +1,9 @@
+title: resume
+author: HY. Kelvin Lee
+quarto-required: ">=1.7.0"
+contributes:
+  formats:
+    pdf:
+      pdf-engine: lualatex
+      template: template.tex
+      keep-tex: true

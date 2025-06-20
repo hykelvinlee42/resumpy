@@ -1,0 +1,120 @@
+---
+author:
+    - name:
+        given: Ho Yin Kelvin
+        family: Lee
+      email: hykelvinlee42@gmail.com
+      url:
+        - https://hykelvinlee.com/
+        - https://github.com/hykelvinlee42
+        - https://www.linkedin.com/in/hykelvinlee
+      orcid: 0009-0000-7340-3204
+jupyter: python3
+execute:
+  eval: true
+  echo: false
+  output: asis
+format:
+    resume-pdf: default
+---
+
+# OVERVIEW
+
+```{python}
+import json
+from IPython.display import display, Markdown
+
+resume_file = open("import/resume.json")
+resume_data = json.load(resume_file)
+resume_file.close()
+```
+
+\begin{itemize}
+
+```{python}
+for overview in resume_data["overview"]:
+    display(Markdown(f"\t\\item\\resumeItem{{{overview}}}"))
+```
+
+\end{itemize}
+
+# WORK EXPERIENCE
+
+```{python}
+work_entry = """
+\\vspace{{5pt}}
+\\begin{{tabular*}}
+    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
+    \\avenirheavy{{{organization}}}\\vspace{{1pt}}\\\\
+    {{{title}}} & {{\\color{{TextBlack}} \\small {duration}}}\\\\
+\\end{{tabular*}}
+"""
+
+work_entry_no_org = """
+\\vspace{{{vspace}}}
+\\begin{{tabular*}}
+    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}\\\\
+    {{{title}}} & {{\\color{{TextBlack}} \\small {duration}}}\\\\
+\\end{{tabular*}}
+"""
+
+for work in resume_data["work"]:
+    for index, position in enumerate(work["positions"]):
+        entry = work_entry.format(organization=work["organization"], title=position["title"], duration=position["duration"]) if index == 0 else work_entry_no_org.format(title=position["title"], duration=position["duration"], vspace="-15pt")
+
+        display(Markdown(f"{entry}\\vspace{{-10pt}}\n\\begin{{itemize}}"))
+        for description in position["description"]:
+            display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
+
+        display(Markdown("\\end{itemize}"))
+```
+
+# VOLUNTEERING AND SERVICES
+
+\vspace{-5pt}
+
+```{python}
+for work in resume_data["volunteer"]:
+    for index, position in enumerate(work["positions"]):
+        entry = work_entry.format(organization=work["organization"], title=position["title"], duration=position["duration"]) if index == 0 else work_entry_no_org.format(title=position["title"], duration=position["duration"], vspace="-12.5pt")
+        display(Markdown(entry))
+```
+
+# RELATED EXPERIENCE
+
+```{python}
+project_entry = """
+\\begin{{tabular*}}
+    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
+    \\uline{{{url}}} & {{\\color{{TextBlack}}\\small {duration}}}\\vspace{{1pt}}\\\\
+    \\avenirheavy{{{nature}}}\\\\
+\\end{{tabular*}}
+\\vspace{{-5pt}}
+"""
+
+for project in resume_data["experience"]:
+    entry = project_entry.format(url=f"\\href{{{project["url"]}}}{{{project["title"]}}}", duration=project["duration"], nature=project["nature"])
+    display(Markdown(f"{entry}\\begin{{itemize}}\\vspace{{-5pt}}"))
+    for description in project["description"]:
+        display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
+
+    display(Markdown("\\end{itemize}"))
+```
+
+# EDUCATION
+
+```{python}
+education_entry = """
+\\begin{{tabular*}}
+    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
+    \\avenirheavy{{{school}}} & {{\\color{{TextBlack}}\\small {duration}}}\\\\
+\\end{{tabular*}}
+\\vspace{{-20pt}}
+\\begin{{itemize}}[leftmargin=0in, label={{}}]
+    \\item\\resumeItem{{{degree}}}
+\\end{{itemize}}
+"""
+
+for education in resume_data["education"]:
+    display(Markdown(education_entry.format(school=education["school"], degree=education["degree"], duration=education["duration"])))
+```

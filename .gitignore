@@ -117,8 +117,4 @@ dmypy.json
 *.aux
 *.out
 
-# generated cover letter files
-letter.txt
-Signature.png
-
 /.quarto/

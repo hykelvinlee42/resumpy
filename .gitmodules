@@ -2,3 +2,6 @@
 	path = db
 	url = git@github.com:hykelvinlee42/myExperience.git
 	ignore = dirty
+[submodule "export"]
+	path = export
+	url = git@github.com:hykelvinlee42/resumpy-export.git

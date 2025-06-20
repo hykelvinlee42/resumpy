@@ -1,0 +1,226 @@
+% =========================
+% Document Class
+% =========================
+\documentclass[letterpaper,10pt]{article}  % Standard article class, 10pt font
+
+%=========================
+% Logic
+%=========================
+\usepackage{xifthen}                % Conditional logic for macros
+\usepackage{xstring}                % String manipulation (e.g., for custom macros)
+
+% =========================
+% Font and Encoding Packages
+% =========================
+\usepackage[T1]{fontenc}            % Output font encoding for better PDF text
+\usepackage[utf8]{inputenc}         % Input encoding (UTF-8)
+\usepackage{lmodern}                % Latin Modern font for better output
+\usepackage{times}                  % Times font (serif)
+
+% =========================
+% Page Layout and Formatting
+% =========================
+\reversemarginpar                   % Place margin notes on the left
+\usepackage{lastpage}               % Reference to last page (for page numbering)
+\usepackage{fancyhdr}               % Custom headers/footers
+\usepackage[
+    paper=letterpaper,
+    marginparwidth=1.1in,
+    marginparsep=.075in,
+    margin=0.5in,
+    tmargin=0.65in,
+    includemp
+]{geometry}                         % Custom page margins
+\usepackage{color}                  % Color support
+
+% =========================
+% List Formatting
+% =========================
+\usepackage[shortlabels]{enumitem}  % Customization of lists (itemize, enumerate)
+
+% =========================
+% Hyperlinks
+% =========================
+\usepackage{hyperref}         % Hyperlinks
+\usepackage{doi}                    % DOI hyperlinks
+\usepackage{url}                    % URL formatting
+
+% =========================
+% Color Definitions
+% =========================
+\definecolor{DarkBlue}{rgb}{0.0, 0.0, 0.3}  % Custom color for links
+
+% =========================
+% Paragraph and List Spacing
+% =========================
+\setlength{\parindent}{0in}         % No paragraph indentation
+
+% =========================
+% Bibliography List Formatting
+% =========================
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0em}
+\newlength{\bibsep}
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{
+    label=,
+    leftmargin=\bibhang,
+    itemindent=-\bibhang,
+    itemsep=\bibsep,
+    parsep=\z@,
+    partopsep=0pt,
+    topsep=0pt
+}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{
+    label=[\arabic*], resume,
+    leftmargin={\bibhang + \widthof{[999]}},
+    itemindent=-\bibhang,
+    itemsep=0.05in,
+    parsep=\z@,
+    partopsep=0pt,
+    topsep=0pt
+}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+% =========================
+% Custom List Environments
+% =========================
+\let\originalItem\item
+\newcommand*{\fixendlist}[1]{
+    \expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}
+}
+\newcommand*{\fixouterlist}[1]{
+    \expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+    \expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}
+}
+\newcommand*{\fixinnerlist}[1]{
+    \expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+    \expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}
+}
+
+\newlist{outerlist}{itemize}{3}
+\setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+\fixendlist{outerlist}
+\fixouterlist{outerlist}
+
+\newlist{lonelist}{itemize}{3}
+\setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+\fixendlist{lonelist}
+\fixouterlist{lonelist}
+
+\newlist{innerlist}{itemize}{3}
+\setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixinnerlist{innerlist}
+
+\newlist{loneinnerlist}{itemize}{3}
+\setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixendlist{loneinnerlist}
+\fixinnerlist{loneinnerlist}
+
+% =========================
+% Section Formatting
+% =========================
+\renewcommand{\section}[1]{
+    \pagebreak[3]
+    \vspace{1.3\baselineskip}
+    \phantomsection\addcontentsline{toc}{section}{#1}
+    \noindent\llap{
+        \scshape\smash{
+            \parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}
+        }
+    }
+    \vspace{-\baselineskip}\par
+}
+
+% =========================
+% Footer and Page Numbering
+% =========================
+\pagestyle{empty}                   % Remove header/footer on all pages
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}{0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+
+\lfoot{
+    \hspace{\footpageshift}
+    \parbox{4in}{
+        \, \hfill
+        \arabic{page} of
+        \protect\pageref*{LastPage}
+        \hfill \,
+    }
+}
+
+% =========================
+% Hyperlink Setup
+% =========================
+\hypersetup{colorlinks,breaklinks,linkcolor=DarkBlue,urlcolor=DarkBlue,anchorcolor=DarkBlue,citecolor=DarkBlue}
+
+% =========================
+% Utility Macros
+% =========================
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}%
+\urlstyle{same}                     % Use same font for URLs
+
+% =========================
+% CV Heading Macro
+% =========================
+\newcommand{\cvHeading}[1]{
+    {
+        \hspace{-\marginparsep minus \marginparwidth}
+        \begin{minipage}[t]{\textwidth + \marginparwidth + \marginparsep}
+        \centering
+        {\Large \bfseries {#1 - Curriculum Vitae}}\\
+        \vspace{0.1cm}
+        \rule{\columnwidth}{1.2pt}
+        \end{minipage}
+    }
+}
+
+\newcommand{\workemails}[2]{
+    \href{mailto:#1}{#1}, \href{mailto:#2}{#2}
+}
+
+\newcommand{\portfolioWebsites}[3]{
+    \href{#1}{Personal Website}, \href{#2}{GitHub}, \href{#3}{LinkedIn}
+}
+
+% =========================
+% Document Body
+% =========================
+\begin{document}
+\normalsize % Set the font size to the document's default (normal) size
+
+\cvHeading{$for(authors/first)$$it.name.given$, $it.name.family$$endfor$}
+
+\section{Contact}
+\label{sec:Contact}
+
+$for(authors/first)$
+\textbf{Personal E-mail}:
+\href{mailto:$authors.email/first$}{$authors.email/first$} \\
+\textbf{Work E-mail}:
+\workemails$for(authors.email/rest)${$it$}$endfor$ \\
+\ifthenelse{\isempty{$authors.phone$}}{}{\textbf{Phone}: $authors.phone$ \\} % Conditionally show phone
+\textbf{Portfolio Websites}:
+\href{https://orcid.org/$authors.orcid$}{ORCID},
+\portfolioWebsites$for(authors.url)${$it$}$endfor$
+$endfor$
+
+$body$
+
+\end{document}

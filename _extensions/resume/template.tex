@@ -1,0 +1,153 @@
+% =========================
+% Document Class
+% =========================
+\documentclass[letterpaper,11pt]{article} % Standard article class for resumes
+
+%=========================
+% Logic
+%=========================
+\usepackage{xifthen}                    % Conditional logic for macros
+\usepackage{xstring}                    % String manipulation (e.g., for custom macros)
+
+% =========================
+% Font and Encoding Packages
+% =========================
+\usepackage[T1]{fontenc}                % Output font encoding for better PDF text
+\usepackage[utf8]{inputenc}             % Input encoding (UTF-8)
+\usepackage{lmodern}                    % Latin Modern font for better output
+\usepackage{fontspec}                   % Advanced font selection (XeLaTeX/LuaLaTeX only)
+
+% =========================
+% Page Layout and Formatting
+% =========================
+\usepackage{lastpage}                   % Reference to last page (for page numbering)
+\usepackage[empty]{fullpage}            % Use full page, minimal margins, no header/footer
+\usepackage{titlesec}                   % Custom section titles
+\usepackage{fancyhdr}                   % Custom headers/footers
+\usepackage{color}                      % Color support
+\usepackage{transparent}                % Transparency for colors
+\usepackage{ragged2e}                   % Ragged right/left text alignment
+
+% =========================
+% List and Table Formatting
+% =========================
+\usepackage{enumitem}                   % Customization of lists (itemize, enumerate)
+
+% =========================
+% Hyperlinks
+% =========================
+\usepackage[hidelinks]{hyperref}        % Hyperlinks without colored boxes
+
+% =========================
+% Miscellaneous
+% =========================
+\usepackage[normalem]{ulem}             % Underlining and strikeout (normal emphasis)
+
+% =========================
+% Color Definitions
+% =========================
+\definecolor{HeaderBrown}{rgb}{0.35, 0.29, 0.23}
+\definecolor{SeparatorPink}{rgb}{0.94, 0.41, 0.25}
+\definecolor{TextBlack}{rgb}{0, 0, 0}
+
+% =========================
+% Page Style Customization
+% =========================
+\pagestyle{fancy}
+\fancyhf{}                               % Clear header/footer
+\fancyfoot{}                             % Clear footer
+\renewcommand{\headrulewidth}{0pt}       % No header line
+\renewcommand{\footrulewidth}{0pt}       % No footer line
+
+% =========================
+% Margin and Spacing Adjustments
+% =========================
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}                          % Use same font for URLs
+\raggedbottom                            % Do not stretch vertical spacing
+\raggedright                             % Left-align text
+\setlength{\tabcolsep}{0in}              % No column separation in tables
+
+% =========================
+% Custom Font Definitions (Requires font files in fonts/)
+% =========================
+\newfontfamily{\timesnewroman}{TimesNewRoman}[Path = fonts/, Extension = .ttf]
+\newfontfamily{\avenirnext}{AvenirNext}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=7}]
+\newfontfamily{\avenirnextmedium}{AvenirNext}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=5}]
+\newfontfamily{\avenir}{Avenir}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=0}]
+\newfontfamily{\avenirheavy}{Avenir}[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=4}]
+
+\setmainfont[Path = fonts/, Extension = .ttc, UprightFeatures = {FontIndex=0}]{Avenir}
+
+% =========================
+% Section Title Formatting
+% =========================
+\titleformat{\section}{
+    \bfseries
+    \vspace{2pt}
+    \centering
+    \large
+    \color{HeaderBrown}
+    \avenirnextmedium
+    \addfontfeatures{LetterSpace=10}
+}{}{0em}{}[
+    \color{SeparatorPink}
+    \transparent{0.5}
+    {\titlerule[0.5pt]}
+    \vspace{-4pt}
+]
+
+% =========================
+% Resume Item and List Macros
+% =========================
+
+% Custom second-level bullet
+\renewcommand{\labelitemii}{\textbullet}
+
+% Resume item macro for consistent font and spacing
+\newcommand{\resumeItem}[1]{\small{#1}\vspace{-5pt}}
+
+% =========================
+% Resume Heading Macro
+% =========================
+\newcommand{\resumeHeading}[6]{
+    \StrSubstitute{#3}{https://github.com/}{}[\github]
+    \StrSubstitute{#4}{https://www.linkedin.com/in/}{}[\linkedin]
+    \begin{center}
+        \color{SeparatorPink}\transparent{0.5}
+        \rule{0.9\textwidth}{1pt}\\
+        \vspace{1pt}
+        \color{HeaderBrown}\transparent{1.0}
+        \href{#2}{\timesnewroman\Large\addfontfeatures{LetterSpace=15}\MakeUppercase{#1}} \\
+        \vspace{5pt}
+        {
+            \avenirnext\small
+            {Github: \href{#3}{\uline{@\github}}}\hspace{2pt}
+            {LinkedIn: \href{#4}{\uline{@\linkedin}}}\hspace{2pt}
+            \ifthenelse{\isempty{#5}}{}{#5\hspace{2pt}} % Conditionally show phone
+            {\href{mailto:#6}{\uline{#6}}}
+        }
+        \color{SeparatorPink}\transparent{0.5}
+        \rule{0.9\textwidth}{3pt}
+    \end{center}
+}
+
+% =========================
+% Document Body
+% =========================
+\begin{document}
+\normalsize % Set the font size to the document's default (normal) size
+
+$for(authors/first)$
+\resumeHeading{$it.name.given$, $it.name.family$}
+$for(authors.url)${$it$}$endfor$
+{$if(it.phone)$$it.phone$$endif$}{$it.email$}
+$endfor$
+
+$body$
+
+\end{document}

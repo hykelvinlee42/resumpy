@@ -1,0 +1,36 @@
+---
+author:
+    - name:
+        given: Ho Yin Kelvin
+        family: Lee
+      email: hykelvinlee42@gmail.com
+      url:
+        - https://hykelvinlee.com/
+        - https://github.com/hykelvinlee42
+        - https://www.linkedin.com/in/hykelvinlee
+      orcid: 0009-0000-7340-3204
+date: today
+date-format: MMM D, YYYY
+recipient: Hiring Committee
+signature: ./import/Signature.png
+jupyter: python3
+execute:
+  eval: true
+  echo: false
+  output: asis
+format:
+    letter-pdf: default
+---
+
+```{python}
+import json
+from IPython.display import display, Markdown
+
+letter_data = open("import/letter.txt")
+
+for line in letter_data.readlines():
+    if len(line) > 1:
+        display(Markdown(f"{line}\\newline\n"))
+
+letter_data.close()
+```
