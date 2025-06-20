@@ -1,0 +1,3 @@
+PyLaTeX
+inquirerpy
+pandas
