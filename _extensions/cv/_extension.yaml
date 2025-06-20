@@ -6,4 +6,4 @@ contributes:
     pdf:
       pdf-engine: lualatex
       template: template.tex
-      keep-tex: true
+      keep-tex: false
