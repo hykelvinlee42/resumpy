@@ -1,0 +1,71 @@
+{
+  "interests": [
+    ""
+  ],
+  "research": [
+    {
+      "organization": "",
+      "organization_url": "",
+      "title": "",
+      "duration": "",
+      "supervisor": "",
+      "supervisor_url": "",
+      "description": [
+        ""
+      ]
+    }
+  ],
+  "work": [
+    {
+      "organization": "",
+      "organization_url": "",
+      "title": "",
+      "duration": ""
+    }
+  ],
+  "governance": [
+    {
+      "organization": "",
+      "organization_url": "",
+      "title": "",
+      "duration": ""
+    }
+  ],
+  "editorials": [],
+  "experience": [
+    {
+      "title": "",
+      "url": "",
+      "nature": "",
+      "duration": "",
+      "description": [
+        ""
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "",
+      "school_url": "",
+      "degree": "",
+      "duration": "",
+      "completion": ""
+    }
+  ],
+  "award": [
+    {
+      "achievement": "",
+      "organizer": "",
+      "organizer_url": "",
+      "completion": ""
+    }
+  ],
+  "license": [
+    {
+      "title": "",
+      "issuer": "",
+      "issuer_url": "",
+      "issued": ""
+    }
+  ]
+}

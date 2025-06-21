@@ -1,0 +1,51 @@
+{
+  "overview": [
+    ""
+  ],
+  "work": [
+    {
+      "organization": "",
+      "positions": [
+        {
+          "title": "",
+          "duration": "",
+          "description": [
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "positions": [
+        {
+          "title": "",
+          "duration": "",
+          "description": []
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "",
+      "url": "",
+      "nature": "",
+      "duration": "",
+      "description": [
+        ""
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "",
+      "school_url": "",
+      "degree": "",
+      "duration": "",
+      "completion": ""
+    }
+  ]
+}
