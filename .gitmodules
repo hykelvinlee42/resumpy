@@ -5,3 +5,8 @@
 [submodule "export"]
 	path = export
 	url = git@github.com:hykelvinlee42/resumpy-export.git
+	ignore = dirty
+[submodule "web"]
+	path = web
+	url = git@github.com:hykelvinlee42/hykelvinlee42.github.io.git
+	ignore = dirty
