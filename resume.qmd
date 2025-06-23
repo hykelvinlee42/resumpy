@@ -38,6 +38,44 @@ for overview in resume_data["overview"]:
 
 \end{itemize}
 
+# EDUCATION
+
+```{python}
+education_entry = """
+\\begin{{tabular*}}
+    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
+    \\avenirheavy{{{school}}} & {{\\color{{TextBlack}}\\small {duration}}}\\\\
+\\end{{tabular*}}
+\\vspace{{-20pt}}
+\\begin{{itemize}}[leftmargin=0in, label={{}}]
+    \\item\\resumeItem{{{degree}}}
+\\end{{itemize}}
+"""
+
+for education in resume_data["education"]:
+    display(Markdown(education_entry.format(school=education["school"], degree=education["degree"], duration=education["duration"])))
+```
+
+# PROFESSIONAL TRAININGS
+
+\begin{itemize}[leftmargin=0in, label={}]
+
+```{python}
+training_entry = """
+\\item \\avenirheavy{{{title}}}, \\avenir{{\\href{{{issuer_url}}}{{{issuer}}}}}\\\\
+{{{issue_date}}}
+"""
+
+for training in resume_data["trainings"]:
+    issue_date = f"Issued {training["issued"]}"
+    if "expiration" in training:
+        issue_date += f", expires {training["expiration"]}"
+
+    display(Markdown(training_entry.format(title=training["title"], issuer_url=training["issuer_url"], issuer=training["issuer"], issue_date=issue_date)))
+```
+
+\end{itemize}
+
 # WORK EXPERIENCE
 
 ```{python}
@@ -99,22 +137,4 @@ for project in resume_data["experience"]:
         display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
 
     display(Markdown("\\end{itemize}"))
-```
-
-# EDUCATION
-
-```{python}
-education_entry = """
-\\begin{{tabular*}}
-    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
-    \\avenirheavy{{{school}}} & {{\\color{{TextBlack}}\\small {duration}}}\\\\
-\\end{{tabular*}}
-\\vspace{{-20pt}}
-\\begin{{itemize}}[leftmargin=0in, label={{}}]
-    \\item\\resumeItem{{{degree}}}
-\\end{{itemize}}
-"""
-
-for education in resume_data["education"]:
-    display(Markdown(education_entry.format(school=education["school"], degree=education["degree"], duration=education["duration"])))
 ```

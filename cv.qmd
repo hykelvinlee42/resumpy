@@ -118,18 +118,18 @@ for governance in cv_data["governance"]:
     display(Markdown(f"{governance["duration"]}: {governance["title"]} \\href{{{governance["organization_url"]}}}{{{governance["organization"]}}}\\vspace{{0.1cm}}\n"))
 ```
 
-# Professional Memberships & Licenses
+# Professional Trainings
 
 ```{python}
-license_entry = """
+training_entry = """
 {title}, \\href{{{issuer_url}}}{{{issuer}}} \\
 Issued {issued}. 
 """
 
-for license in cv_data["license"]:
-    entry = license_entry.format(title=license["title"], issuer_url=license["issuer_url"], issuer=license["issuer"], issued=license["issued"])
-    if "expiration" in license:
-        entry += f"Expires {license["expiration"]}."
+for training in cv_data["trainings"]:
+    entry = training_entry.format(title=training["title"], issuer_url=training["issuer_url"], issuer=training["issuer"], issued=training["issued"])
+    if "expiration" in training:
+        entry += f"Expires {training["expiration"]}."
 
     display(Markdown(f"{entry}\\vspace{{0.1cm}}"))
 ```
