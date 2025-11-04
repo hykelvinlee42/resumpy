@@ -115,7 +115,7 @@ for work in cv_data["work"]:
 
 ```{python}
 for governance in cv_data["governance"]:
-    display(Markdown(f"{governance["duration"]}: {governance["title"]} \\href{{{governance["organization_url"]}}}{{{governance["organization"]}}}\\vspace{{0.1cm}}\n"))
+    display(Markdown(f"{governance['duration']}: {governance['title']} \\href{{{governance['organization_url']}}}{{{governance['organization']}}}\\vspace{{0.1cm}}\n"))
 ```
 
 # Professional Trainings
@@ -129,7 +129,7 @@ Issued {issued}.
 for training in cv_data["trainings"]:
     entry = training_entry.format(title=training["title"], issuer_url=training["issuer_url"], issuer=training["issuer"], issued=training["issued"])
     if "expiration" in training:
-        entry += f"Expires {training["expiration"]}."
+        entry += f"Expires {training['expiration']}."
 
     display(Markdown(f"{entry}\\vspace{{0.1cm}}"))
 ```

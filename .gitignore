@@ -118,3 +118,5 @@ dmypy.json
 *.out
 
 /.quarto/
+
+**/*.quarto_ipynb
