@@ -115,26 +115,31 @@ for work in resume_data["work"]:
 for work in resume_data["volunteer"]:
     for index, position in enumerate(work["positions"]):
         entry = work_entry.format(organization=work["organization"], title=position["title"], duration=position["duration"]) if index == 0 else work_entry_no_org.format(title=position["title"], duration=position["duration"], vspace="-12.5pt")
-        display(Markdown(entry))
+
+        display(Markdown(f"{entry}\\vspace{{-10pt}}\n\\begin{{itemize}}"))
+        for description in position["description"]:
+            display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
+
+        display(Markdown("\\end{itemize}"))
 ```
 
-# RELATED EXPERIENCE
+<!-- # RELATED EXPERIENCE -->
 
 ```{python}
-project_entry = """
-\\begin{{tabular*}}
-    \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
-    \\uline{{{url}}} & {{\\color{{TextBlack}}\\small {duration}}}\\vspace{{1pt}}\\\\
-    \\avenirheavy{{{nature}}}\\\\
-\\end{{tabular*}}
-\\vspace{{-5pt}}
-"""
+# project_entry = """
+# \\begin{{tabular*}}
+#     \\textwidth[t]{{l@{{\\extracolsep{{\\fill}}}}r}}
+#     \\uline{{{url}}} & {{\\color{{TextBlack}}\\small {duration}}}\\vspace{{1pt}}\\\\
+#     \\avenirheavy{{{nature}}}\\\\
+# \\end{{tabular*}}
+# \\vspace{{-5pt}}
+# """
 
-for project in resume_data["experience"]:
-    entry = project_entry.format(url=f"\\href{{{project['url']}}}{{{project['title']}}}", duration=project["duration"], nature=project["nature"])
-    display(Markdown(f"{entry}\\begin{{itemize}}\\vspace{{-5pt}}"))
-    for description in project["description"]:
-        display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
+# for project in resume_data["experience"]:
+#     entry = project_entry.format(url=f"\\href{{{project['url']}}}{{{project['title']}}}", duration=project["duration"], nature=project["nature"])
+#     display(Markdown(f"{entry}\\begin{{itemize}}\\vspace{{-5pt}}"))
+#     for description in project["description"]:
+#         display(Markdown(f"\t\\item\\resumeItem{{{description}}}"))
 
-    display(Markdown("\\end{itemize}"))
+#     display(Markdown("\\end{itemize}"))
 ```
